@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women Range — PixieCare Ayurvedic Skincare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F1E7;--paper:#FBF8F1;--ink:#2A2A24;--forest:#33422F;
+    --gold:#A9884E;--gold-soft:#C6A96E;--line:#E4DBC9;--muted:#7C766A;--maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  .eyebrow{font-family:'Jost',sans-serif;font-weight:400;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:15px 34px;border:1px solid var(--forest);color:var(--forest);background:transparent;transition:.3s;cursor:pointer}
+  .btn:hover{background:var(--forest);color:var(--cream)}
+  .btn-dark{background:var(--forest);color:var(--cream)}
+  .btn-dark:hover{background:transparent;color:var(--forest)}
+
+  .announce{background:var(--forest);color:var(--cream);text-align:center;font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:11px 16px;font-weight:300}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 32px;max-width:var(--maxw);margin:0 auto}
+  .nav-links{display:flex;gap:30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .nav-links a{color:var(--ink);opacity:.85;transition:.2s}
+  .nav-links a.on,.nav-links a:hover{opacity:1;color:var(--gold)}
+  .logo{text-align:center}
+  .logo img{height:60px;width:auto;display:block;margin:0 auto}
+  .logo .mark{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;letter-spacing:.14em;color:var(--forest)}
+  .logo .sub{font-size:8.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:-2px}
+  .nav-right{display:flex;gap:22px;justify-content:flex-end;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .nav-right a{opacity:.85}
+  .nav-right a:hover{opacity:1;color:var(--gold)}
+
+  /* collection hero */
+  .chero{position:relative;overflow:hidden;color:#fff;text-align:center;padding:78px 24px 84px;background:
+    radial-gradient(120% 120% at 50% 0%, rgba(169,136,78,.5) 0%, rgba(169,136,78,0) 55%),
+    linear-gradient(160deg,#2b3527 0%,#33422F 55%,#3d4a35 100%)}
+  .chero::after{content:"स्त्री";position:absolute;left:50%;bottom:-12%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:22vw;line-height:.8;color:rgba(246,241,231,.05);pointer-events:none}
+  .chero .eyebrow{color:var(--gold-soft);position:relative;z-index:2}
+  .chero h1{font-size:clamp(38px,5.2vw,64px);margin:14px 0 14px;position:relative;z-index:2}
+  .chero p{max-width:52ch;margin:0 auto;opacity:.9;font-size:15px;position:relative;z-index:2}
+
+  .crumb{max-width:var(--maxw);margin:0 auto;padding:20px 32px 0;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .crumb a:hover{color:var(--gold)}
+  .crumb span{color:var(--gold)}
+
+  /* toolbar */
+  .toolbar{max-width:var(--maxw);margin:0 auto;padding:26px 32px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .toolbar .count{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .chips{display:flex;gap:9px;flex-wrap:wrap}
+  .chips button{font-family:'Jost';font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 15px;border:1px solid var(--line);background:var(--paper);color:var(--forest);cursor:pointer;transition:.2s}
+  .chips button.on,.chips button:hover{background:var(--forest);color:var(--cream);border-color:var(--forest)}
+  .sortwrap{display:flex;align-items:center;gap:10px}
+  .sortwrap label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .sortwrap select{font-family:'Jost';font-size:13px;padding:9px 30px 9px 12px;border:1px solid var(--line);background:var(--paper);color:var(--forest);cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23A9884E' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+
+  /* body layout */
+  .shell{max-width:var(--maxw);margin:0 auto;padding:26px 32px 90px;display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:start}
+
+  /* filters sidebar */
+  .filters{position:sticky;top:100px}
+  .fgroup{border-bottom:1px solid var(--line);padding:22px 0}
+  .fgroup:first-child{padding-top:0}
+  .fgroup h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);margin-bottom:16px}
+  .fgroup ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .fgroup li{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted);cursor:pointer;transition:.15s}
+  .fgroup li:hover{color:var(--forest)}
+  .fgroup .box{width:14px;height:14px;border:1px solid var(--gold);display:inline-block;flex:none}
+  .fgroup li.sel .box{background:var(--gold)}
+  .fgroup li.sel{color:var(--forest)}
+  .fgroup .num{margin-left:auto;font-size:12px;color:var(--muted)}
+  .price-range{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+  .price-range input{width:100%}
+
+  /* product grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 28px}
+  .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.35s;position:relative}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(51,66,47,.4)}
+  .badge{position:absolute;top:14px;left:14px;background:var(--gold);color:#fff;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;z-index:2}
+  .wish{position:absolute;top:12px;right:12px;z-index:2;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:15px;opacity:0;transition:.25s}
+  .card:hover .wish{opacity:1}
+  .imgwrap{aspect-ratio:1/1.05;overflow:hidden;background:#fff;padding:16px}
+  .imgwrap img{width:100%;height:100%;object-fit:contain;transition:.6s}
+  .card:hover .imgwrap img{transform:scale(1.05)}
+  .cbody{padding:20px 18px 24px;text-align:center;display:flex;flex-direction:column;gap:7px;flex:1}
+  .kind{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .name{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);line-height:1.15}
+  .desc{font-size:12px;color:var(--muted);min-height:32px}
+  .stars{font-size:11px;color:var(--gold);letter-spacing:1px}
+  .price{font-size:15px;margin-top:2px}
+  .price .was{color:var(--muted);text-decoration:line-through;font-size:12.5px;margin-left:6px}
+  .add{margin-top:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);border-bottom:1px solid var(--gold);align-self:center;padding-bottom:3px;transition:.2s}
+  .add:hover{color:var(--gold)}
+
+  .loadmore{text-align:center;margin-top:60px}
+
+  /* footer */
+  footer{background:var(--paper);border-top:1px solid var(--line);padding:70px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+  .foot .mark{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:.12em;color:var(--forest)}
+  .foot p{font-size:13px;color:var(--muted);margin-top:14px;max-width:32ch}
+  .foot h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);margin-bottom:18px}
+  .foot ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .foot ul a{font-size:13.5px;color:var(--muted)}
+  .foot ul a:hover{color:var(--gold)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted)}
+
+  @media(max-width:980px){
+    .nav-links,.nav-right{display:none}
+    .shell{grid-template-columns:1fr;gap:24px}
+    .filters{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 30px;border:1px solid var(--line);padding:6px 18px;background:var(--paper)}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 20px}
+    .filters{grid-template-columns:1fr}
+    .grid{grid-template-columns:1fr 1fr;gap:22px 16px}
+    .toolbar{padding-left:20px;padding-right:20px}
+    .shell{padding:24px 20px 70px}
+    .foot-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">Complimentary shipping on all orders above ₹999 · 100% Natural &amp; Chemical-Free</div>
+
+<header>
+  <div class="nav">
+    <nav class="nav-links">
+      <a href="index.html">Shop All</a>
+      <a href="collection-women.html" class="on">Women</a>
+      <a href="index.html#ranges">Kids &amp; Babies</a>
+      <a href="index.html#ranges">Vegan</a>
+    </nav>
+    <a class="logo" href="index.html">
+      <img src="assets/logo.png" alt="PixieCare — Authentic Sustainable Ayurveda">
+    </a>
+    <div class="nav-right">
+      <a href="#">Search</a>
+      <a href="#">Account</a>
+      <a href="#">Cart (0)</a>
+    </div>
+  </div>
+</header>
+
+<!-- COLLECTION HERO -->
+<section class="chero">
+  <div class="eyebrow">The Women Range</div>
+  <h1>Rituals of radiance</h1>
+  <p>Ayurvedic skincare crafted for the modern woman — from our 24K gold Kumkumadi serum to time-honoured bath bars and hair therapies.</p>
+</section>
+
+<div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <span>Women Range</span></div>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="count">8 Products</div>
+  <div class="chips">
+    <button class="on">All</button>
+    <button>Radiance</button>
+    <button>Anti-Ageing</button>
+    <button>Hair Care</button>
+    <button>Bath &amp; Body</button>
+  </div>
+  <div class="sortwrap">
+    <label for="sort">Sort</label>
+    <select id="sort">
+      <option>Featured</option>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+      <option>Best Selling</option>
+      <option>Newest</option>
+    </select>
+  </div>
+</div>
+
+<!-- SHELL -->
+<div class="shell">
+  <!-- FILTERS -->
+  <aside class="filters">
+    <div class="fgroup">
+      <h4>Category</h4>
+      <ul>
+        <li class="sel"><span class="box"></span> Face Serum <span class="num">1</span></li>
+        <li><span class="box"></span> Bath Bars <span class="num">4</span></li>
+        <li><span class="box"></span> Hair Care <span class="num">1</span></li>
+        <li><span class="box"></span> Lip Balm <span class="num">1</span></li>
+        <li><span class="box"></span> Tools <span class="num">1</span></li>
+      </ul>
+    </div>
+    <div class="fgroup">
+      <h4>Skin Concern</h4>
+      <ul>
+        <li><span class="box"></span> Dullness &amp; Glow</li>
+        <li><span class="box"></span> Fine Lines</li>
+        <li><span class="box"></span> Clarity &amp; Acne</li>
+        <li><span class="box"></span> Dryness</li>
+      </ul>
+    </div>
+    <div class="fgroup">
+      <h4>Price</h4>
+      <div class="price-range">
+        <span>₹385</span>
+        <input type="range" min="385" max="2299" value="2299">
+        <span>₹2,299</span>
+      </div>
+    </div>
+    <div class="fgroup" style="border-bottom:none">
+      <h4>Values</h4>
+      <ul>
+        <li><span class="box"></span> Vegan</li>
+        <li><span class="box"></span> Cruelty-Free</li>
+        <li><span class="box"></span> Under ₹999</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- PRODUCT GRID -->
+  <div class="grid">
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="badge">24K Gold</span><span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/swarnamaya.jpg" alt="Swarnamaya"></div>
+      <div class="cbody"><span class="kind">Face Serum</span><span class="name">Swarnamaya</span><span class="desc">Kumkumadi &amp; 24K gold radiance elixir</span><span class="price">₹2,299</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/varnini.jpg" alt="Varnini"></div>
+      <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Varnini</span><span class="desc">Saffron &amp; donkey-milk golden glow</span><span class="price">₹495</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="badge">Value Pack</span><span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/varnini.jpg" alt="Varnini Pack of 3"></div>
+      <div class="cbody"><span class="kind">Bath Bar · Pack of 3</span><span class="name">Varnini</span><span class="desc">Golden glow therapy trio</span><span class="price">₹1,299</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/haritha.jpg" alt="Haritha"></div>
+      <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Haritha</span><span class="desc">Acalypha indica clear-skin therapy</span><span class="price">₹385</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="badge">Value Pack</span><span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/haritha.jpg" alt="Haritha Pack of 3"></div>
+      <div class="cbody"><span class="kind">Bath Bar · Pack of 3</span><span class="name">Haritha</span><span class="desc">Clear-skin therapy trio</span><span class="price">₹999</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="badge">Bestseller</span><span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/kesha-vardhana.png" alt="Kesha Vardhana"></div>
+      <div class="cbody"><span class="kind">Hair Oil</span><span class="name">Kesha Vardhana</span><span class="desc">160 herbs for stronger, fuller hair</span><span class="price">₹1,125</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/kansa.jpg" alt="Kansa Gua Sha"></div>
+      <div class="cbody"><span class="kind">Facial Tool</span><span class="name">Kansa Gua Sha</span><span class="desc">Pure Kansa sculpting &amp; glow ritual</span><span class="price">₹1,299</span><span class="add">View Product</span></div>
+    </a>
+
+    <a class="card" href="product-swarnamaya.html">
+      <span class="wish">♡</span>
+      <div class="imgwrap"><img src="assets/mridu.png" alt="Mridu"></div>
+      <div class="cbody"><span class="kind">Lip Balm</span><span class="name">Mridu</span><span class="desc">Ghee-rich Ayurvedic lip therapy</span><span class="price">₹499</span><span class="add">View Product</span></div>
+    </a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-grid">
+      <div>
+        <div class="mark">PIXIECARE</div>
+        <p>Ayurvedic skincare for the whole family — botanical, sustainable and made with love in India.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="index.html">Shop All</a></li>
+          <li><a href="collection-women.html">Women Range</a></li>
+          <li><a href="index.html">Kids &amp; Babies</a></li>
+          <li><a href="index.html">Vegan Range</a></li>
+          <li><a href="index.html">Under ₹999</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">The Journal</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+917845198490">+91 78451 98490</a></li>
+          <li><a href="mailto:admin@pixiecare.co.in">admin@pixiecare.co.in</a></li>
+          <li><a href="#">@pixiecare_official</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PixieCare. All rights reserved.</span>
+      <span>Privacy · Terms · Shipping &amp; Returns</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.chips button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.chips button').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+    });
+  });
+  document.querySelectorAll('.fgroup li').forEach(function(li){
+    li.addEventListener('click',function(){li.classList.toggle('sel')});
+  });
+</script>
+</body>
+</html>
