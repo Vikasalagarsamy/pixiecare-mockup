@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carukesi — Baby Shampoo Bar · PixieCare</title>
+<title>Aja — Healing Baby Massage Oil · PixieCare</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -62,6 +62,7 @@
   .info .size{font-size:13px;color:var(--muted);margin-bottom:14px}
   .stars{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:13px;color:var(--muted)}
   .stars .s{color:var(--gold);letter-spacing:2px;font-size:15px}
+  .stars .s.empty{color:var(--line)}
 
   .price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;flex-wrap:wrap}
   .price-row .now{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--forest)}
@@ -100,7 +101,7 @@
   .sec-head h2{font-size:clamp(26px,3.2vw,38px);color:var(--forest);margin:10px 0 8px}
   .sec-head p{color:var(--muted);max-width:52ch;margin:0 auto;font-size:15px}
 
-  /* manufactured with care (real, 5 items) */
+  /* manufactured with care */
   .manuf{background:var(--paper)}
   .manuf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;max-width:1080px;margin:0 auto}
   .manuf-item{text-align:center}
@@ -117,25 +118,9 @@
   .seal .l2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600}
   .seal .l3{font-size:8px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;max-width:70px}
 
-  /* reviews (real widget) */
-  .reviews{background:var(--paper)}
-  .rev-summary{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap;margin-bottom:44px}
-  .rev-score{text-align:center}
-  .rev-score .n{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--forest)}
-  .rev-score .s{color:var(--gold);font-size:16px;letter-spacing:2px}
-  .rev-score .b{font-size:12px;color:var(--muted);margin-top:4px}
-  .rev-bars{display:flex;flex-direction:column;gap:6px;min-width:260px}
-  .rev-bar{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted)}
-  .rev-bar .track{flex:1;height:6px;background:var(--line);position:relative}
-  .rev-bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--gold)}
-  .rev-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:26px 30px}
-  .rev-card .s{color:var(--gold);letter-spacing:2px;margin-bottom:10px;font-size:14px}
-  .rev-card .who{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
-  .rev-card .who b{font-size:14px;color:var(--forest)}
-  .rev-card .date{font-size:11px;color:var(--muted);margin-left:auto}
-  .rev-card .title{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--forest);margin-bottom:6px}
-  .rev-card p{font-size:14px;color:var(--ink);opacity:.85}
-  .rev-cta{text-align:center;margin-top:30px}
+  /* reviews — honest empty state */
+  .reviews{background:var(--paper);text-align:center}
+  .reviews .empty{font-size:15px;color:var(--muted);margin-bottom:24px}
 
   /* cross sell */
   .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
@@ -180,7 +165,6 @@
     .grid4{grid-template-columns:1fr 1fr;gap:18px}
     .foot-grid{grid-template-columns:1fr}
     .manuf-grid{grid-template-columns:repeat(2,1fr);gap:26px 16px}
-    .rev-summary{gap:24px}
     .stickybar .nm{font-size:14px}
   }
 </style>
@@ -214,26 +198,26 @@
   <div class="track-row"><a href="#">Track Your Order</a></div>
 </header>
 
-<div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="collection-kids.html">Kids &amp; Babies Range</a> &nbsp;/&nbsp; <span>Carukesi</span></div>
+<div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="collection-kids.html">Kids &amp; Babies Range</a> &nbsp;/&nbsp; <span>Aja</span></div>
 
 <div class="pdp" id="pdp-top">
   <div class="gallery">
     <div class="g-main">
       <span class="wish" aria-label="Add to wishlist">♡</span>
-      <img src="assets/carukesi.jpg" alt="Carukesi Baby Shampoo Bar">
+      <img src="assets/aja.png" alt="Aja Healing Baby Massage Oil">
     </div>
   </div>
 
   <div class="info">
-    <div class="kicker"><span class="k">Baby Shampoo Bar · Kids &amp; Babies</span></div>
-    <h1>Carukesi</h1>
-    <div class="subtitle">Baby Shampoo Bar</div>
-    <div class="size">100g | 3.53 oz</div>
-    <div class="stars"><span class="s">★★★★★</span> 1 review</div>
+    <div class="kicker"><span class="k">Baby Massage Oil · Kids &amp; Babies</span></div>
+    <h1>Aja</h1>
+    <div class="subtitle">Healing Baby Massage Oil</div>
+    <div class="size">100ml | 3.38 fl oz</div>
+    <div class="stars"><span class="s empty">☆☆☆☆☆</span> No reviews</div>
 
-    <div class="price-row"><span class="now">₹675.00</span><span class="was">₹775.00</span></div>
+    <div class="price-row"><span class="now">₹999.00</span><span class="was">₹1,185.00</span></div>
 
-    <p class="lead">Crafted carefully for baby's scalp with the wisdom of traditional Ayurveda, this shampoo bar prevents dry scalp and makes baby's hair soft, shiny, thicker and stronger. Fights dandruff and heals minor wounds.</p>
+    <p class="lead">Crafted with the wisdom of traditional Ayurveda, this massage oil is rich in antioxidants and vitamins, providing deep hydration and revitalizing baby's skin. It works to even out the skin tone, reduce the appearance of redness or blemishes, and reveal a more luminous complexion.</p>
 
     <div class="buy">
       <div class="qty">
@@ -249,17 +233,17 @@
     <div class="acc">
       <details open>
         <summary>Key Ingredients <span class="plus">+</span></summary>
-        <div class="ac-body">Shikakai (Soap Pod), Reetha (Soap Nut), Amalaki (Amla), Sigru (Moringa), Japa (Hibiscus).</div>
+        <div class="ac-body">Dasamoola, Laksha, Devadaru, Yashtimadu, Manjishta, Rakthachandan (Red sandalwood), Kamalam (Lotus), Kasturi majal (Turmeric), Goat milk, Sariba (Nannari root / Indian Sarsaparilla), Sesame oil, Olive oil, Dadima (Pomegranate), Draksha (Dried black grape).</div>
       </details>
       <details>
         <summary>How to Use <span class="plus">+</span></summary>
-        <div class="ac-body">Adding a little water, lather Carukesi baby shampoo bar between your palms. Apply the lather on baby's scalp and hair with gentle strokes. Rinse with lukewarm water.</div>
+        <div class="ac-body">Warm Aja healing oil and gently massage onto baby's body. Leave it for 30 minutes and then cleanse. Rinse with warm water.</div>
       </details>
     </div>
   </div>
 </div>
 
-<!-- MANUFACTURED WITH CARE (real, 5 items) -->
+<!-- MANUFACTURED WITH CARE -->
 <section class="band manuf">
   <div class="wrap">
     <div class="sec-head"><h2>Manufactured with care</h2></div>
@@ -285,31 +269,12 @@
   </div>
 </section>
 
-<!-- CUSTOMER REVIEWS (real) -->
+<!-- CUSTOMER REVIEWS — honest empty state, matching the real live page -->
 <section class="band reviews">
   <div class="wrap">
     <div class="sec-head"><h2>Customer Reviews</h2></div>
-    <div class="rev-summary">
-      <div class="rev-score">
-        <div class="s">★★★★★</div>
-        <div class="n">5.00</div>
-        <div class="b">out of 5 · Based on 1 review</div>
-      </div>
-      <div class="rev-bars">
-        <div class="rev-bar"><span>5 ★</span><span class="track"><span class="fill" style="width:100%"></span></span><span>1</span></div>
-        <div class="rev-bar"><span>4 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-        <div class="rev-bar"><span>3 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-        <div class="rev-bar"><span>2 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-        <div class="rev-bar"><span>1 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-      </div>
-    </div>
-    <div class="rev-card">
-      <div class="s">★★★★★</div>
-      <div class="who"><b>Meenal</b><span class="date">10/11/2024</span></div>
-      <div class="title">Amazing</div>
-      <p>The shampoo bar is great, leaves the hair soft, doesn't hurt the eyes — all this while being all natural 💜</p>
-    </div>
-    <div class="rev-cta"><a href="#" class="btn">Write a review</a></div>
+    <p class="empty">Be the first to write a review.</p>
+    <a href="#" class="btn">Write a review</a>
   </div>
 </section>
 
@@ -325,17 +290,17 @@
         <div class="imgwrap"><img src="assets/hira.png" alt="Hira"></div>
         <div class="cbody"><span class="kind">Baby Nourishing Cream</span><span class="name">Hira</span><span class="price">₹1,225.00</span></div>
       </a>
-      <a class="card" href="product-dhanvantari.html">
-        <div class="imgwrap"><img src="assets/dhanvantari.png" alt="Dhanvantari"></div>
-        <div class="cbody"><span class="kind">Baby Eye Kajal</span><span class="name">Dhanvantari</span><span class="price">₹575.00</span></div>
+      <a class="card" href="product-cananga.html">
+        <div class="imgwrap"><img src="assets/cananga.jpg" alt="Cananga"></div>
+        <div class="cbody"><span class="kind">Ayurvedic Nourishing Bar</span><span class="name">Cananga</span><span class="price">₹385.00</span></div>
       </a>
       <a class="card" href="product-kshira.html">
         <div class="imgwrap"><img src="assets/kshira.jpg" alt="Kshira"></div>
         <div class="cbody"><span class="kind">Baby Nourishing Bar</span><span class="name">Kshira</span><span class="price">₹385.00</span></div>
       </a>
-      <a class="card" href="product-aja.html">
-        <div class="imgwrap"><img src="assets/aja.png" alt="Aja"></div>
-        <div class="cbody"><span class="kind">Baby Massage Oil</span><span class="name">Aja</span><span class="price">₹999.00</span></div>
+      <a class="card" href="product-carukesi.html">
+        <div class="imgwrap"><img src="assets/carukesi.jpg" alt="Carukesi"></div>
+        <div class="cbody"><span class="kind">Baby Shampoo Bar</span><span class="name">Carukesi</span><span class="price">₹675.00</span></div>
       </a>
     </div>
   </div>
@@ -392,10 +357,10 @@
 <!-- STICKY MINI CART -->
 <div class="stickybar" id="stickybar">
   <div class="in">
-    <img src="assets/carukesi.jpg" alt="Carukesi">
+    <img src="assets/aja.png" alt="Aja">
     <div>
-      <div class="nm">Carukesi</div>
-      <div class="pr">₹675.00</div>
+      <div class="nm">Aja</div>
+      <div class="pr">₹999.00</div>
     </div>
     <div class="sp"></div>
     <button class="btn btn-dark">Add to cart</button>
