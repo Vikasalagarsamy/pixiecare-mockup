@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swarnamaya — Kumkumadi 24K Gold Serum · PixieCare</title>
+<title>Haritha — Clear Skin Therapy · PixieCare</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -62,6 +62,7 @@
   .info .size{font-size:13px;color:var(--muted);margin-bottom:14px}
   .stars{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:13px;color:var(--muted)}
   .stars .s{color:var(--gold);letter-spacing:2px;font-size:15px}
+  .stars .s.empty{color:var(--line)}
 
   .price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;flex-wrap:wrap}
   .price-row .now{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--forest)}
@@ -117,29 +118,11 @@
   .seal .l2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600}
   .seal .l3{font-size:8px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;max-width:70px}
 
-  /* reviews (real widget) */
-  .reviews{background:var(--paper)}
-  .rev-summary{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap;margin-bottom:44px}
-  .rev-score{text-align:center}
-  .rev-score .n{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--forest)}
-  .rev-score .s{color:var(--gold);font-size:16px;letter-spacing:2px}
-  .rev-score .b{font-size:12px;color:var(--muted);margin-top:4px}
-  .rev-bars{display:flex;flex-direction:column;gap:6px;min-width:260px}
-  .rev-bar{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted)}
-  .rev-bar .track{flex:1;height:6px;background:var(--line);position:relative}
-  .rev-bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--gold)}
-  .rev-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:26px 30px}
-  .rev-card .s{color:var(--gold);letter-spacing:2px;margin-bottom:10px;font-size:14px}
-  .rev-card .who{display:flex;align-items:center;gap:10px;margin-bottom:6px}
-  .rev-card .who b{font-size:14px;color:var(--forest)}
-  .rev-card .verified{font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--forest);color:var(--cream);padding:2px 7px}
-  .rev-card .date{font-size:11px;color:var(--muted);margin-left:auto}
-  .rev-card .title{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--forest);margin-bottom:6px}
-  .rev-card p{font-size:14px;color:var(--ink);opacity:.85}
-  .rev-cta{text-align:center;margin-top:30px}
+  /* reviews — honest empty state */
+  .reviews{background:var(--paper);text-align:center}
+  .reviews .empty{font-size:15px;color:var(--muted);margin-bottom:24px}
 
   /* cross sell */
-  .xsell{}
   .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
   .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.35s}
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(51,66,47,.4)}
@@ -182,7 +165,6 @@
     .grid4{grid-template-columns:1fr 1fr;gap:18px}
     .foot-grid{grid-template-columns:1fr}
     .manuf-grid{grid-template-columns:repeat(2,1fr);gap:26px 16px}
-    .rev-summary{gap:24px}
     .stickybar .nm{font-size:14px}
   }
 </style>
@@ -216,26 +198,26 @@
   <div class="track-row"><a href="#">Track Your Order</a></div>
 </header>
 
-<div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="collection-women.html">Women Range</a> &nbsp;/&nbsp; <span>Swarnamaya</span></div>
+<div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="collection-women.html">Women Range</a> &nbsp;/&nbsp; <span>Haritha</span></div>
 
 <div class="pdp" id="pdp-top">
   <div class="gallery">
     <div class="g-main">
       <span class="wish" aria-label="Add to wishlist">♡</span>
-      <img src="assets/swarnamaya.jpg" alt="Swarnamaya Kumkumadi 24K Gold Serum">
+      <img src="assets/haritha.jpg" alt="Haritha Clear Skin Therapy">
     </div>
   </div>
 
   <div class="info">
-    <div class="kicker"><span class="k">Face Serum · Women Range</span></div>
-    <h1>Swarnamaya</h1>
-    <div class="subtitle">kumkumadi 24k gold serum</div>
-    <div class="size">12ml e 0.41fl. oz.</div>
-    <div class="stars"><span class="s">★★★★★</span> 1 review</div>
+    <div class="kicker"><span class="k">Bath Bar · Women Range</span></div>
+    <h1>Haritha</h1>
+    <div class="subtitle">Clear Skin Therapy</div>
+    <div class="size">100g | 3.53 oz</div>
+    <div class="stars"><span class="s empty">☆☆☆☆☆</span> No reviews</div>
 
-    <div class="price-row"><span class="now">₹2,299.00</span><span class="was">₹2,650.00</span></div>
+    <div class="price-row"><span class="now">₹385.00</span><span class="was">₹445.00</span></div>
 
-    <p class="lead">A luxurious Ayurvedic face serum infused with traditional Kumkumadi oils and pure 24K gold leaf to illuminate, nourish, and rejuvenate the skin. This age-defying blend helps improve skin radiance, enhance softness, and reduce the appearance of fine lines and dullness for a naturally youthful glow. Lightweight and deeply nourishing, it leaves the skin smooth, luminous, and revitalised.</p>
+    <p class="lead">Rooted in the timeless wisdom of Ayurveda, Haritha Clear Skin Therapy is infused with Acalypha indica, a treasured botanical traditionally valued for promoting clear, balanced, healthy-looking skin. This luxurious herbal bath bar delicately purifies and refreshes while preserving the skin's natural moisture balance. Regular use helps support a smoother, refined-looking complexion with a naturally fresh, radiant glow.</p>
 
     <div class="buy">
       <div class="qty">
@@ -251,11 +233,11 @@
     <div class="acc">
       <details open>
         <summary>Key Ingredients <span class="plus">+</span></summary>
-        <div class="ac-body">Saffron, 24 carat gold, Sandalwood, Manjistha, Licorice, Vetiver, rose extract etc.</div>
+        <div class="ac-body">Harita manjari (Acalypha indica).</div>
       </details>
       <details>
         <summary>How to Use <span class="plus">+</span></summary>
-        <div class="ac-body">Apply 2–3 drops to cleansed face and neck. Gently massage in upward circular motions until fully absorbed. Use daily, preferably at night, for best results.</div>
+        <div class="ac-body">Gently apply the lather to skin and rinse off with warm water. Pat the skin dry with a soft towel.</div>
       </details>
     </div>
   </div>
@@ -287,31 +269,12 @@
   </div>
 </section>
 
-<!-- CUSTOMER REVIEWS (real) -->
+<!-- CUSTOMER REVIEWS — honest empty state, matching the real live page -->
 <section class="band reviews">
   <div class="wrap">
     <div class="sec-head"><h2>Customer Reviews</h2></div>
-    <div class="rev-summary">
-      <div class="rev-score">
-        <div class="s">★★★★★</div>
-        <div class="n">5.00</div>
-        <div class="b">out of 5 · Based on 1 review</div>
-      </div>
-      <div class="rev-bars">
-        <div class="rev-bar"><span>5 ★</span><span class="track"><span class="fill" style="width:100%"></span></span><span>1</span></div>
-        <div class="rev-bar"><span>4 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-        <div class="rev-bar"><span>3 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-        <div class="rev-bar"><span>2 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-        <div class="rev-bar"><span>1 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
-      </div>
-    </div>
-    <div class="rev-card">
-      <div class="s">★★★★★</div>
-      <div class="who"><b>Nura</b><span class="verified">Verified</span><span class="date">06/12/2026</span></div>
-      <div class="title">My new favourite nighttime routine</div>
-      <p>Honestly, I bought it because the bottle looked beautiful! But after using it for a few days, I'm really enjoying it — this has become my favourite part of my nighttime routine, the kumkumadi aroma feels so soothing and I wake up with skin that looks fresh, hydrated and naturally radiant.</p>
-    </div>
-    <div class="rev-cta"><a href="#" class="btn">Write a review</a></div>
+    <p class="empty">Be the first to write a review.</p>
+    <a href="#" class="btn">Write a review</a>
   </div>
 </section>
 
@@ -323,19 +286,19 @@
       <h2>You may also love</h2>
     </div>
     <div class="grid4">
+      <a class="card" href="product-swarnamaya.html">
+        <div class="imgwrap"><img src="assets/swarnamaya.jpg" alt="Swarnamaya"></div>
+        <div class="cbody"><span class="kind">Face Serum</span><span class="name">Swarnamaya</span><span class="price">₹2,299.00</span></div>
+      </a>
       <a class="card" href="product-varnini.html">
         <div class="imgwrap"><img src="assets/varnini.jpg" alt="Varnini"></div>
         <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Varnini</span><span class="price">₹495.00</span></div>
       </a>
-      <a class="card" href="product-haritha.html">
-        <div class="imgwrap"><img src="assets/haritha.jpg" alt="Haritha"></div>
-        <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Haritha</span><span class="price">₹385.00</span></div>
-      </a>
-      <a class="card" href="product-swarnamaya.html">
+      <a class="card" href="collection-women.html">
         <div class="imgwrap"><img src="assets/kesha-vardhana.png" alt="Kesha Vardhana"></div>
         <div class="cbody"><span class="kind">Hair Oil</span><span class="name">Kesha Vardhana</span><span class="price">₹1,125.00</span></div>
       </a>
-      <a class="card" href="product-swarnamaya.html">
+      <a class="card" href="collection-women.html">
         <div class="imgwrap"><img src="assets/mridu.png" alt="Mridu"></div>
         <div class="cbody"><span class="kind">Lip Balm</span><span class="name">Mridu</span><span class="price">₹499.00</span></div>
       </a>
@@ -394,10 +357,10 @@
 <!-- STICKY MINI CART -->
 <div class="stickybar" id="stickybar">
   <div class="in">
-    <img src="assets/swarnamaya.jpg" alt="Swarnamaya">
+    <img src="assets/haritha.jpg" alt="Haritha">
     <div>
-      <div class="nm">Swarnamaya</div>
-      <div class="pr">₹2,299.00</div>
+      <div class="nm">Haritha</div>
+      <div class="pr">₹385.00</div>
     </div>
     <div class="sp"></div>
     <button class="btn btn-dark">Add to cart</button>
