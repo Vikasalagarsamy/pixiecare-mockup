@@ -112,7 +112,7 @@
 
   /* ---- why shop ---- */
   .whyshop{background:var(--paper)}
-  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:640px;margin:0 auto}
+  .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;max-width:1080px;margin:0 auto}
   .why{text-align:center}
   .why .ic{width:70px;height:70px;border-radius:50%;background:var(--cream);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold)}
   .why h3{font-size:19px;color:var(--forest);margin-bottom:8px}
@@ -157,6 +157,7 @@
     .utility .contact{display:none}
     .grid,.range-grid{grid-template-columns:repeat(2,1fr)}
     .mission{grid-template-columns:1fr;gap:32px}
+    .why-grid{grid-template-columns:repeat(3,1fr)}
     .foot-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:560px){
@@ -165,7 +166,7 @@
     .grid{grid-template-columns:1fr 1fr;gap:20px 14px}
     .hero-inner{padding:0 24px}
     .foot-grid{grid-template-columns:1fr}
-    .why-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:repeat(2,1fr);gap:26px 16px}
     .cert-row{gap:28px}
   }
 </style>
@@ -329,8 +330,11 @@
       <h2>Why Shop with PixieCare?</h2>
     </div>
     <div class="why-grid">
-      <div class="why"><div class="ic">✦</div><h3>Chemical Free</h3><p>Free from sulphate, paraben, NaOH (caustic soda), artificial colors, fragrance, SLS, SLES, silicon &amp; EDTA.</p></div>
-      <div class="why"><div class="ic">❋</div><h3>Ayurvedic Method</h3><p>Made with traditional Ayurvedic methods and time-honoured botanical ingredients.</p></div>
+      <div class="why"><div class="ic">✦</div><h3>Cruelty Free</h3><p>Never tested on animals in any step of the way.</p></div>
+      <div class="why"><div class="ic">❋</div><h3>Sustainable</h3><p>Crafted to minimize carbon footprint.</p></div>
+      <div class="why"><div class="ic">☙</div><h3>100% Natural</h3><p>Traditional Ayurvedic herbs, roots, fruits &amp; flowers.</p></div>
+      <div class="why"><div class="ic">✿</div><h3>Chemical Free</h3><p>Free from sulphate, paraben, NaOH, SLS, SLES, silicon &amp; EDTA.</p></div>
+      <div class="why"><div class="ic">❀</div><h3>Ayurvedic Method</h3><p>Made with traditional Ayurvedic methods.</p></div>
     </div>
   </div>
 </section>
