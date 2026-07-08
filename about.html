@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Story — PixieCare Ayurvedic Skincare</title>
+<title>About PixieCare | Ayurvedic Baby Care &amp; Sustainability</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,229 +19,158 @@
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
-  .narrow{max-width:760px}
+  .narrow{max-width:720px}
   .eyebrow{font-family:'Jost',sans-serif;font-weight:400;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
   .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:15px 34px;border:1px solid var(--forest);color:var(--forest);background:transparent;transition:.3s;cursor:pointer}
   .btn:hover{background:var(--forest);color:var(--cream)}
-  .btn-dark{background:var(--forest);color:var(--cream)}
-  .btn-dark:hover{background:transparent;color:var(--forest)}
   .btn-light{border-color:var(--cream);color:var(--cream)}
   .btn-light:hover{background:var(--cream);color:var(--forest)}
 
-  .announce{background:var(--forest);color:var(--cream);text-align:center;font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:11px 16px;font-weight:300}
-  header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 32px;max-width:var(--maxw);margin:0 auto}
-  .nav-links{display:flex;gap:30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .utility{background:var(--forest);color:var(--cream)}
+  .utility .wrap{display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:11.5px}
+  .utility .contact{display:flex;gap:20px;opacity:.9;white-space:nowrap}
+  .marquee{flex:1;overflow:hidden;margin:0 24px;position:relative;height:16px}
+  .marquee span{position:absolute;white-space:nowrap;letter-spacing:.18em;text-transform:uppercase;font-size:10.5px;color:var(--gold-soft);animation:scroll-left 18s linear infinite}
+  @keyframes scroll-left{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 32px;max-width:var(--maxw);margin:0 auto}
+  .nav-links{display:flex;gap:26px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
   .nav-links a{color:var(--ink);opacity:.85;transition:.2s}
   .nav-links a:hover{opacity:1;color:var(--gold)}
   .logo{text-align:center}
-  .logo img{height:60px;width:auto;display:block;margin:0 auto}
-  .logo .mark{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;letter-spacing:.14em;color:var(--forest)}
-  .logo .sub{font-size:8.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:-2px}
-  .nav-right{display:flex;gap:22px;justify-content:flex-end;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .logo img{height:54px;width:auto;display:block;margin:0 auto}
+  .nav-right{display:flex;gap:20px;justify-content:flex-end;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
   .nav-right a{opacity:.85}
   .nav-right a:hover{opacity:1;color:var(--gold)}
+  .track-row{text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:8px 0;border-top:1px solid var(--line)}
 
-  /* hero */
-  .hero{position:relative;overflow:hidden;color:#fff;text-align:center;padding:96px 24px 104px;background:
-    radial-gradient(120% 120% at 50% 10%, rgba(169,136,78,.5) 0%, rgba(169,136,78,0) 55%),
-    linear-gradient(160deg,#2b3527 0%,#33422F 55%,#3d4a35 100%)}
-  .hero::after{content:"आयुर्वेद";position:absolute;left:50%;bottom:-10%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:17vw;line-height:.8;color:rgba(246,241,231,.05);pointer-events:none;white-space:nowrap}
-  .hero .eyebrow{color:var(--gold-soft);position:relative;z-index:2}
-  .hero h1{font-size:clamp(40px,5.6vw,72px);margin:16px 0 18px;line-height:1.05;position:relative;z-index:2}
-  .hero p{max-width:50ch;margin:0 auto;opacity:.92;font-size:16px;position:relative;z-index:2}
+  .crumb{max-width:var(--maxw);margin:0 auto;padding:20px 32px 0;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .crumb span{color:var(--gold)}
 
-  /* manifesto */
-  .manifesto{text-align:center;padding:96px 0 90px}
-  .manifesto .lede{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.2vw,38px);color:var(--forest);line-height:1.34;font-style:italic}
-  .manifesto .rule{width:56px;height:1px;background:var(--gold);margin:34px auto 0}
+  .pagehead{text-align:center;padding:56px 24px 40px}
+  .pagehead h1{font-size:clamp(32px,4vw,50px);color:var(--forest)}
 
-  /* story split */
-  .story{display:grid;grid-template-columns:1fr 1fr;align-items:center}
-  .story.rev .media{order:2}
-  .story .media{min-height:520px;background-size:cover;background-position:center}
-  .story .txt{padding:clamp(44px,6vw,96px)}
-  .story .txt h2{font-size:clamp(28px,3.4vw,44px);color:var(--forest);margin:14px 0 20px;line-height:1.1}
-  .story .txt p{font-size:15px;color:var(--muted);margin-bottom:16px;max-width:46ch}
-  .story.dark{background:var(--forest);color:var(--cream)}
-  .story.dark h2{color:var(--cream)}
-  .story.dark p{color:rgba(246,241,231,.85)}
-  .story.dark .eyebrow{color:var(--gold-soft)}
+  section.band{padding:70px 0}
+  .story h2{font-size:clamp(24px,2.8vw,34px);color:var(--forest);margin:12px 0 20px}
+  .story p{font-size:15.5px;color:var(--ink);opacity:.9;margin-bottom:16px}
+  .story + .story{border-top:1px solid var(--line)}
+  .sign{text-align:center;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold);margin-top:30px}
 
-  /* founder note */
-  .founder{background:var(--paper);text-align:center;padding:96px 0}
-  .founder .quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2.8vw,32px);color:var(--forest);line-height:1.4;max-width:720px;margin:24px auto 30px}
-  .founder .sign{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--gold);margin-bottom:4px}
-  .founder .role{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .certified{text-align:center;background:var(--paper)}
+  .cert-row{display:flex;justify-content:center;gap:56px;margin-top:32px;flex-wrap:wrap}
+  .seal{width:110px;height:110px;border-radius:50%;border:2px solid var(--forest);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--forest);text-align:center;position:relative}
+  .seal::before{content:"";position:absolute;inset:6px;border:1px dashed var(--gold);border-radius:50%}
+  .seal .l1{font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+  .seal .l2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600}
+  .seal .l3{font-size:8px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;max-width:70px}
 
-  /* values */
-  .values{padding:96px 0}
-  .sec-head{text-align:center;margin-bottom:56px}
-  .sec-head h2{font-size:clamp(28px,3.6vw,44px);color:var(--forest);margin:12px 0 10px}
-  .sec-head p{color:var(--muted);max-width:52ch;margin:0 auto;font-size:15px}
-  .val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
-  .val{text-align:center}
-  .val .ic{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--gold);line-height:1}
-  .val h3{font-size:22px;color:var(--forest);margin:16px 0 8px}
-  .val p{font-size:13px;color:var(--muted);max-width:26ch;margin:0 auto}
-
-  /* promise / numbers */
-  .promise{background:var(--forest);color:var(--cream);text-align:center;padding:90px 0}
-  .promise .sec-head h2{color:var(--cream)}
-  .promise .sec-head .eyebrow{color:var(--gold-soft)}
-  .promise .sec-head p{color:rgba(246,241,231,.7)}
-  .pr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
-  .pr .n{font-family:'Cormorant Garamond',serif;font-size:46px;color:var(--gold-soft);line-height:1}
-  .pr .l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-top:12px;opacity:.9}
-
-  /* cta */
-  .cta{position:relative;overflow:hidden;text-align:center;padding:100px 24px;background:
+  .cta{position:relative;overflow:hidden;text-align:center;padding:90px 24px;background:
     radial-gradient(120% 120% at 50% 100%, rgba(169,136,78,.4) 0%, rgba(169,136,78,0) 55%),
     linear-gradient(160deg,#3d4a35 0%,#33422F 60%,#2b3527 100%);color:#fff}
-  .cta h2{font-size:clamp(30px,4vw,50px);margin:14px 0 16px}
-  .cta p{opacity:.9;max-width:44ch;margin:0 auto 30px}
+  .cta h2{font-size:clamp(28px,3.6vw,44px);margin:12px 0 16px}
+  .cta p{opacity:.9;max-width:44ch;margin:0 auto 26px}
 
-  /* footer */
-  footer{background:var(--paper);border-top:1px solid var(--line);padding:70px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
-  .foot .mark{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:.12em;color:var(--forest)}
-  .foot p{font-size:13px;color:var(--muted);margin-top:14px;max-width:32ch}
+  footer{background:var(--paper);border-top:1px solid var(--line);padding:70px 0 0}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
   .foot h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);margin-bottom:18px}
+  .foot p{font-size:13px;color:var(--muted);margin-top:14px;max-width:32ch}
   .foot ul{list-style:none;display:flex;flex-direction:column;gap:11px}
   .foot ul a{font-size:13.5px;color:var(--muted)}
   .foot ul a:hover{color:var(--gold)}
-  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted)}
+  .newsform{display:flex;margin-top:16px;max-width:340px}
+  .newsform input{flex:1;padding:11px 14px;border:1px solid var(--line);background:#fff;font-family:'Jost';font-size:13px}
+  .newsform button{background:var(--forest);color:var(--cream);border:none;padding:0 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+  .social-row{display:flex;gap:10px;margin-top:14px}
+  .social-row a{width:32px;height:32px;border-radius:50%;background:var(--gold-soft);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+  .pay-row{display:flex;gap:8px;padding:22px 32px;border-top:1px solid var(--line);flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+  .pay-row span{font-size:10px;border:1px solid var(--line);padding:4px 8px;color:var(--muted);letter-spacing:.06em}
+  .foot-bottom{border-top:1px solid var(--line);padding:18px 32px;font-size:12px;color:var(--muted);text-align:center}
 
   @media(max-width:980px){
     .nav-links,.nav-right{display:none}
-    .story{grid-template-columns:1fr}
-    .story.rev .media{order:0}
-    .story .media{min-height:340px}
-    .val-grid{grid-template-columns:repeat(2,1fr);gap:44px 24px}
-    .pr-grid{grid-template-columns:repeat(2,1fr);gap:40px 20px}
+    .utility .contact{display:none}
     .foot-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:560px){
     .wrap{padding:0 20px}
-    .val-grid{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr}
+    .cert-row{gap:28px}
   }
 </style>
 </head>
 <body>
 
-<div class="announce">Complimentary shipping on all orders above ₹999 · 100% Natural &amp; Chemical-Free</div>
+<div class="utility">
+  <div class="wrap">
+    <div class="contact"><a href="tel:+917845198490">+91 78451 98490</a><a href="mailto:admin@pixiecare.co.in">admin@pixiecare.co.in</a></div>
+    <div class="marquee"><span>Sustainability is the New Luxury</span></div>
+  </div>
+</div>
 
 <header>
   <div class="nav">
     <nav class="nav-links">
-      <a href="index.html">Shop All</a>
-      <a href="collection-women.html">Women</a>
+      <a href="index.html">Home</a>
+      <a href="collection-women.html">Women Range</a>
       <a href="index.html#ranges">Kids &amp; Babies</a>
-      <a href="index.html#ranges">Vegan</a>
+      <a href="index.html#ranges">Vegan Range</a>
     </nav>
     <a class="logo" href="index.html">
       <img src="assets/logo.png" alt="PixieCare — Authentic Sustainable Ayurveda">
     </a>
     <div class="nav-right">
       <a href="#">Search</a>
-      <a href="#">Account</a>
+      <a href="about.html">About Us</a>
       <a href="#">Cart (0)</a>
     </div>
   </div>
+  <div class="track-row"><a href="#">Track Your Order</a></div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="eyebrow">Our Story</div>
-  <h1>Timeless wisdom,<br>made for today.</h1>
-  <p>PixieCare was born from a simple belief — that the purest skincare has been with us for centuries, in the gentle wisdom of Ayurveda.</p>
-</section>
+<div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <span>About Us</span></div>
 
-<!-- MANIFESTO -->
-<section class="manifesto">
+<div class="pagehead"><h1>About Us</h1></div>
+
+<!-- FOUNDER STORY (real, verbatim from the live site, lightly copy-edited) -->
+<section class="band story">
   <div class="wrap narrow">
-    <div class="eyebrow">Our Promise</div>
-    <p class="lede">“We redefine everyday skincare through the timeless wisdom of Ayurveda — botanical, sustainable, and made with love for your family and the planet.”</p>
-    <div class="rule"></div>
+    <div class="eyebrow">Founder Story</div>
+    <h2>Crafted from a mother, for all the mothers</h2>
+    <p>For as long as I can remember, I have always loved the idea of building a business with my whole heart. The part of creating something excited me beyond words — it really made me feel at home, like I was meant to do this.</p>
+    <p>Fast forward to being a mother of two, it all started with searching for the right product when I had my first child. I knew exactly what I wanted, and what was missing in the market — that's when the idea of building conscious, mindful products for kids was born. For four years, I worked relentlessly in the background, trying formulas for each product and brainstorming sustainable packaging. Staying true to our brand values every step of the way sometimes meant shifting the launch date multiple times, just to make sure every detail reflected our commitment to sustainability.</p>
   </div>
 </section>
 
-<!-- STORY 1 -->
-<section class="story">
-  <div class="media" style="background-image:url('https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=1200&auto=format&fit=crop')"></div>
-  <div class="txt">
-    <div class="eyebrow">Where it began</div>
-    <h2>A ritual passed down through generations.</h2>
-    <p>Like so many Indian homes, ours kept its beauty secrets in the kitchen and the garden — kumkumadi for glow, herbal oils for hair, gentle ubtan for the little ones. Recipes trusted for generations, never a harsh chemical in sight.</p>
-    <p>PixieCare began as a promise to bring that wisdom back — thoughtfully made, honestly formulated, and safe enough for every member of the family.</p>
-  </div>
-</section>
-
-<!-- STORY 2 (dark, reversed) -->
-<section class="story rev dark">
-  <div class="media" style="background-image:url('assets/swarnamaya.jpg');background-color:#fff"></div>
-  <div class="txt">
-    <div class="eyebrow">What we stand for</div>
-    <h2>Purity, potency &amp; performance.</h2>
-    <p>Every formula is 100% natural and free from sulfates, parabens, SLS and synthetic nasties. No shortcuts, no fillers — only botanicals that have earned their place over centuries of use.</p>
-    <p>We craft in small batches, test rigorously, and hold ourselves to ISO and GMP standards. Because skincare your family trusts should never ask you to compromise.</p>
-    <a href="index.html" class="btn btn-light">Explore the Collection</a>
-  </div>
-</section>
-
-<!-- FOUNDER NOTE -->
-<section class="founder">
+<section class="band story">
   <div class="wrap narrow">
-    <div class="eyebrow">A note from our founder</div>
-    <p class="quote">“I started PixieCare for my own family first — for skin I wasn't willing to gamble with. Everything we make still passes that test. If it isn't good enough for the people I love, it doesn't leave our door.”</p>
-    <div class="sign">Ameena</div>
-    <div class="role">Founder, PixieCare</div>
+    <div class="eyebrow">Ayurvedic, Chemical-Free Baby Care</div>
+    <h2>Made for the softest skin</h2>
+    <p>Babies' skin is soft and prone to a lot of skin issues due to environmental pollution. We wanted to formulate a chemical-free Ayurvedic product that fights dryness, rashes, itching, redness, psoriasis, eczema, atopic dermatitis, rosacea, blemishes and skin irritation. With the wisdom of traditional, authentic Ayurveda, we handpicked ingredients that help fight these issues in a baby's skin. Our products are made using Ayurvedic preparations and methods — without preservatives, artificial colours, sulphate, parabens, SLS, SLES, silicones, lead, petrochemicals or EDTA.</p>
+    <p>Our formulations nourish your little one's skin and eyes from within, gently cleansing while retaining essential moisture.</p>
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="values">
+<section class="band story">
+  <div class="wrap narrow">
+    <div class="eyebrow">Sustainable Packaging</div>
+    <h2>Kind to skin, kinder to the planet</h2>
+    <p>Making every product plastic-free in its packaging was one of the biggest challenges — it consumed 70% of the time in this four-year journey. I almost gave up, until I heard a packaging supplier say, "You can't live without plastic." It made me sad how easily people accepted that, without seeing the bigger picture of what it does to Mother Earth. I wanted to break that chain. I wanted to do my part. Be the change I wanted to see.</p>
+    <p>We worked on every detail to remove plastic from our packaging — we didn't even laminate our product labels for looks, that's how specific we were.</p>
+    <p>Most of all, I wanted to build a brand rooted in true authenticity — one that is kind to Mother Earth, and a choice every mother would be proud to make for her little ones.</p>
+    <div class="sign">Here it is — crafted from a mother, for all the mothers ✨</div>
+  </div>
+</section>
+
+<!-- CERTIFIED -->
+<section class="band certified">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">What guides us</div>
-      <h2>Our Values</h2>
-      <p>Four principles behind every formula we make.</p>
+    <div class="eyebrow">Certified Quality</div>
+    <h2 style="color:var(--forest);margin:12px 0 0;font-family:'Cormorant Garamond',serif;font-size:32px">Trusted Care</h2>
+    <div class="cert-row">
+      <div class="seal"><span class="l1">Certified</span><span class="l2">ISO</span><span class="l3">22716:2007 Company</span></div>
+      <div class="seal"><span class="l1">ISO 22716</span><span class="l2">GMP</span><span class="l3">Good Manufacturing Practice</span></div>
     </div>
-    <div class="val-grid">
-      <div class="val"><div class="ic">✦</div><h3>Botanical</h3><p>Time-honoured Ayurvedic ingredients, never synthetic substitutes.</p></div>
-      <div class="val"><div class="ic">❋</div><h3>Sustainable</h3><p>Thoughtful sourcing and mindful packaging, kinder to the planet.</p></div>
-      <div class="val"><div class="ic">☙</div><h3>Family-Safe</h3><p>Gentle enough for babies, effective enough for grown-ups.</p></div>
-      <div class="val"><div class="ic">✿</div><h3>Ethical</h3><p>Cruelty-free always. Honestly made, honestly labelled.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROMISE / NUMBERS -->
-<section class="promise">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Here's why we're the real deal</div>
-      <h2>Our clean commitment</h2>
-      <p>No shortcuts, no synthetics — only honest Ayurvedic care.</p>
-    </div>
-    <div class="pr-grid">
-      <div class="pr"><div class="n">100%</div><div class="l">Natural Origin</div></div>
-      <div class="pr"><div class="n">0</div><div class="l">Harmful Chemicals</div></div>
-      <div class="pr"><div class="n">ISO</div><div class="l">&amp; GMP Certified</div></div>
-      <div class="pr"><div class="n">∞</div><div class="l">Cruelty-Free Always</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- STORY 3 (sustainability) -->
-<section class="story">
-  <div class="media" style="background-image:url('https://images.unsplash.com/photo-1466781783364-36c955e42a7f?q=80&w=1200&auto=format&fit=crop')"></div>
-  <div class="txt">
-    <div class="eyebrow">Our commitment</div>
-    <h2>Kind to skin, kinder to the planet.</h2>
-    <p>Sustainability isn't a footnote for us — it's built into how we source, formulate and package. We choose botanicals that regenerate, partners who farm responsibly, and materials that tread lightly.</p>
-    <p>Because caring for your family and caring for the earth were never meant to be separate things.</p>
   </div>
 </section>
 
@@ -255,45 +184,50 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap foot">
+  <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="mark">PIXIECARE</div>
-        <p>Ayurvedic skincare for the whole family — botanical, sustainable and made with love in India.</p>
+      <div class="foot">
+        <h4>Let's get in touch</h4>
+        <p>Enter your email address to receive news on new product launches, ad promotions, special offers and useful skincare routines.</p>
+        <form class="newsform" onsubmit="return false">
+          <input type="email" placeholder="Enter your email" aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
-      <div>
-        <h4>Shop</h4>
+      <div class="foot">
+        <h4>Quick Link</h4>
         <ul>
-          <li><a href="index.html">Shop All</a></li>
-          <li><a href="collection-women.html">Women Range</a></li>
-          <li><a href="index.html">Kids &amp; Babies</a></li>
-          <li><a href="index.html">Vegan Range</a></li>
-          <li><a href="index.html">Under ₹999</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
+          <li><a href="index.html">Shop</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="#">The Journal</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Order Tracking</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Get in touch</h4>
+      <div class="foot">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Stay in Touch</h4>
         <ul>
           <li><a href="tel:+917845198490">+91 78451 98490</a></li>
           <li><a href="mailto:admin@pixiecare.co.in">admin@pixiecare.co.in</a></li>
-          <li><a href="#">@pixiecare_official</a></li>
         </ul>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 PixieCare. All rights reserved.</span>
-      <span>Privacy · Terms · Shipping &amp; Returns</span>
-    </div>
   </div>
+  <div class="pay-row">
+    <span>AMEX</span><span>Maestro</span><span>Mastercard</span><span>RuPay</span><span>VISA</span>
+  </div>
+  <div class="foot-bottom">© 2026 PIXIE CARE, All rights reserved.</div>
 </footer>
 
 </body>

@@ -26,221 +26,215 @@
   .btn-dark:hover{background:transparent;color:var(--forest)}
   .btn-block{width:100%}
 
-  .announce{background:var(--forest);color:var(--cream);text-align:center;font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:11px 16px;font-weight:300}
-  header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 32px;max-width:var(--maxw);margin:0 auto}
-  .nav-links{display:flex;gap:30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .utility{background:var(--forest);color:var(--cream)}
+  .utility .wrap{display:flex;align-items:center;justify-content:space-between;padding:9px 32px;font-size:11.5px}
+  .utility .contact{display:flex;gap:20px;opacity:.9;white-space:nowrap}
+  .marquee{flex:1;overflow:hidden;margin:0 24px;position:relative;height:16px}
+  .marquee span{position:absolute;white-space:nowrap;letter-spacing:.18em;text-transform:uppercase;font-size:10.5px;color:var(--gold-soft);animation:scroll-left 18s linear infinite}
+  @keyframes scroll-left{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 32px;max-width:var(--maxw);margin:0 auto}
+  .nav-links{display:flex;gap:26px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
   .nav-links a{color:var(--ink);opacity:.85;transition:.2s}
   .nav-links a:hover{opacity:1;color:var(--gold)}
   .logo{text-align:center}
-  .logo img{height:60px;width:auto;display:block;margin:0 auto}
-  .logo .mark{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;letter-spacing:.14em;color:var(--forest)}
-  .logo .sub{font-size:8.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:-2px}
-  .nav-right{display:flex;gap:22px;justify-content:flex-end;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .logo img{height:54px;width:auto;display:block;margin:0 auto}
+  .nav-right{display:flex;gap:20px;justify-content:flex-end;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:400}
   .nav-right a{opacity:.85}
   .nav-right a:hover{opacity:1;color:var(--gold)}
+  .track-row{text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:8px 0;border-top:1px solid var(--line)}
 
-  /* breadcrumb */
   .crumb{max-width:var(--maxw);margin:0 auto;padding:22px 32px 0;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
   .crumb a:hover{color:var(--gold)}
   .crumb span{color:var(--gold)}
 
-  /* PDP top */
-  .pdp{max-width:var(--maxw);margin:0 auto;padding:26px 32px 90px;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+  .pdp{max-width:var(--maxw);margin:0 auto;padding:26px 32px 70px;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
   .gallery{position:sticky;top:100px}
-  .g-main{background:#fff;border:1px solid var(--line);aspect-ratio:1/1.05;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .g-main{background:#fff;border:1px solid var(--line);aspect-ratio:1/1.05;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative}
   .g-main img{width:100%;height:100%;object-fit:contain;padding:28px}
-  .g-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
-  .g-thumbs button{background:#fff;border:1px solid var(--line);aspect-ratio:1/1;overflow:hidden;cursor:pointer;padding:0;transition:.2s}
-  .g-thumbs button.active{border-color:var(--gold)}
-  .g-thumbs img{width:100%;height:100%;object-fit:cover}
+  .wish{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:16px;cursor:pointer}
 
-  /* PDP info */
-  .info .kicker{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .info .kicker{display:flex;align-items:center;gap:14px;margin-bottom:10px}
   .info .kicker .k{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
-  .info h1{font-size:clamp(34px,4vw,50px);color:var(--forest);line-height:1.05;margin-bottom:8px}
-  .info .subtitle{font-size:16px;color:var(--muted);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:16px}
-  .stars{display:flex;align-items:center;gap:10px;margin-bottom:22px;font-size:13px;color:var(--muted)}
+  .info h1{font-size:clamp(30px,3.6vw,44px);color:var(--forest);line-height:1.05;margin-bottom:6px}
+  .info .subtitle{color:var(--muted);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:19px;margin-bottom:6px}
+  .info .size{font-size:13px;color:var(--muted);margin-bottom:14px}
+  .stars{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:13px;color:var(--muted)}
   .stars .s{color:var(--gold);letter-spacing:2px;font-size:15px}
+
   .price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;flex-wrap:wrap}
-  .price-row .now{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--forest)}
-  .price-row .was{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--muted);text-decoration:line-through}
-  .price-row .off{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 9px}
-  .price-row .tax{font-size:12px;color:var(--muted);width:100%}
-  .lead{font-size:15px;color:var(--ink);opacity:.85;margin-bottom:26px;max-width:46ch}
+  .price-row .now{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--forest)}
+  .price-row .was{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--muted);text-decoration:line-through}
 
-  .benefits{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
-  .benefits span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);border:1px solid var(--line);background:var(--paper);padding:7px 13px;border-radius:2px}
+  .lead{font-size:15px;color:var(--ink);opacity:.85;margin-bottom:22px;max-width:46ch}
 
-  .opt-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  .sizes{display:flex;gap:10px;margin-bottom:26px}
-  .sizes button{font-family:'Jost';font-size:13px;padding:11px 20px;border:1px solid var(--forest);background:transparent;color:var(--forest);cursor:pointer;transition:.2s}
-  .sizes button.active{background:var(--forest);color:var(--cream)}
-
-  .buy{display:flex;gap:12px;margin-bottom:14px}
+  .buy{display:flex;gap:12px;margin-bottom:16px}
   .qty{display:flex;align-items:center;border:1px solid var(--forest)}
   .qty button{width:44px;height:52px;background:transparent;border:none;font-size:18px;color:var(--forest);cursor:pointer}
   .qty input{width:40px;text-align:center;border:none;background:transparent;font-family:'Jost';font-size:15px;color:var(--forest)}
   .buy .btn{flex:1;height:52px;line-height:22px}
-  .buynow{margin-bottom:26px}
 
-  .assure{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 22px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:26px}
-  .assure div{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--ink)}
-  .assure .ic{color:var(--gold);font-size:17px;font-family:'Cormorant Garamond',serif}
+  .shipline{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--forest);margin-bottom:26px;padding:14px 16px;background:var(--paper);border:1px solid var(--line)}
+  .shipline .gi{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--gold)}
 
-  /* accordion */
   .acc details{border-bottom:1px solid var(--line)}
   .acc summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);font-weight:400}
   .acc summary::-webkit-details-marker{display:none}
   .acc summary .plus{color:var(--gold);font-size:18px;transition:.3s}
   .acc details[open] summary .plus{transform:rotate(45deg)}
   .acc .ac-body{padding:0 0 20px;font-size:14px;color:var(--muted);max-width:52ch}
-  .acc .ac-body ul{margin:8px 0 0 18px;display:flex;flex-direction:column;gap:6px}
 
-  /* section shell */
-  section.band{padding:90px 0}
-  .sec-head{text-align:center;margin-bottom:52px}
-  .sec-head h2{font-size:clamp(28px,3.6vw,44px);color:var(--forest);margin:12px 0 10px}
+  /* sticky mini cart bar */
+  .stickybar{position:fixed;left:0;right:0;bottom:-100px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 30px -18px rgba(0,0,0,.2);z-index:60;transition:bottom .3s}
+  .stickybar.show{bottom:0}
+  .stickybar .in{max-width:var(--maxw);margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:18px}
+  .stickybar img{width:44px;height:44px;object-fit:contain;background:var(--paper);border:1px solid var(--line)}
+  .stickybar .nm{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--forest)}
+  .stickybar .pr{font-size:13px;color:var(--muted)}
+  .stickybar .sp{flex:1}
+  .stickybar .btn{padding:11px 24px}
+
+  section.band{padding:80px 0}
+  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(26px,3.2vw,38px);color:var(--forest);margin:10px 0 8px}
   .sec-head p{color:var(--muted);max-width:52ch;margin:0 auto;font-size:15px}
 
-  /* ingredients */
-  .ingredients{background:var(--paper)}
-  .ing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-  .ing{text-align:center}
-  .ing .ph{aspect-ratio:1/1;border-radius:50%;overflow:hidden;width:180px;margin:0 auto 22px;border:1px solid var(--line)}
-  .ing .ph img{width:100%;height:100%;object-fit:cover}
-  .ing h3{font-size:23px;color:var(--forest);margin-bottom:8px}
-  .ing p{font-size:13.5px;color:var(--muted);max-width:32ch;margin:0 auto}
+  /* manufactured with care */
+  .manuf{background:var(--paper)}
+  .manuf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:640px;margin:0 auto}
+  .manuf-item{text-align:center}
+  .manuf-item .ic{width:72px;height:72px;border-radius:50%;background:var(--cream);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold)}
+  .manuf-item h3{font-size:18px;color:var(--forest);margin-bottom:6px}
+  .manuf-item p{font-size:12.5px;color:var(--muted);max-width:30ch;margin:0 auto}
 
-  /* ritual steps */
-  .ritual{background:var(--forest);color:var(--cream)}
-  .ritual .sec-head h2{color:var(--cream)}
-  .ritual .sec-head .eyebrow{color:var(--gold-soft)}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:960px;margin:0 auto}
-  .step{text-align:center}
-  .step .n{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold-soft);line-height:1;margin-bottom:14px}
-  .step h4{font-size:19px;font-family:'Cormorant Garamond',serif;font-weight:500;margin-bottom:8px}
-  .step p{font-size:12.5px;opacity:.82;max-width:26ch;margin:0 auto}
+  /* certified */
+  .certified{text-align:center}
+  .cert-row{display:flex;justify-content:center;gap:56px;margin-top:32px;flex-wrap:wrap}
+  .seal{width:110px;height:110px;border-radius:50%;border:2px solid var(--forest);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--forest);text-align:center;position:relative}
+  .seal::before{content:"";position:absolute;inset:6px;border:1px dashed var(--gold);border-radius:50%}
+  .seal .l1{font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+  .seal .l2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600}
+  .seal .l3{font-size:8px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;max-width:70px}
 
-  /* editorial claim */
-  .claim{display:grid;grid-template-columns:1fr 1fr;align-items:center}
-  .claim .media{aspect-ratio:1/1;background:#fff url('assets/swarnamaya.jpg') center/cover}
-  .claim .txt{padding:clamp(40px,6vw,88px)}
-  .claim .txt h2{font-size:clamp(28px,3.4vw,44px);color:var(--forest);margin:14px 0 18px;line-height:1.1}
-  .claim .txt p{font-size:15px;color:var(--muted);margin-bottom:16px;max-width:44ch}
-  .claim .stat-row{display:flex;gap:40px;margin-top:24px}
-  .claim .stat .n{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--gold)}
-  .claim .stat .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  /* reviews (real widget) */
+  .reviews{background:var(--paper)}
+  .rev-summary{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap;margin-bottom:44px}
+  .rev-score{text-align:center}
+  .rev-score .n{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--forest)}
+  .rev-score .s{color:var(--gold);font-size:16px;letter-spacing:2px}
+  .rev-score .b{font-size:12px;color:var(--muted);margin-top:4px}
+  .rev-bars{display:flex;flex-direction:column;gap:6px;min-width:260px}
+  .rev-bar{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted)}
+  .rev-bar .track{flex:1;height:6px;background:var(--line);position:relative}
+  .rev-bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--gold)}
+  .rev-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:26px 30px}
+  .rev-card .s{color:var(--gold);letter-spacing:2px;margin-bottom:10px;font-size:14px}
+  .rev-card .who{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .rev-card .who b{font-size:14px;color:var(--forest)}
+  .rev-card .verified{font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--forest);color:var(--cream);padding:2px 7px}
+  .rev-card .date{font-size:11px;color:var(--muted);margin-left:auto}
+  .rev-card .title{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--forest);margin-bottom:6px}
+  .rev-card p{font-size:14px;color:var(--ink);opacity:.85}
+  .rev-cta{text-align:center;margin-top:30px}
 
-  /* reviews */
-  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .rev{background:var(--paper);border:1px solid var(--line);padding:30px 26px}
-  .rev .s{color:var(--gold);letter-spacing:2px;margin-bottom:14px}
-  .rev p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--forest);line-height:1.4;margin-bottom:18px}
-  .rev .who{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-  .rev .who b{color:var(--ink);font-weight:500}
-
-  /* cross-sell */
-  .xsell{background:var(--paper)}
-  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
-  .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.35s;position:relative}
+  /* cross sell */
+  .xsell{}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.35s}
   .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(51,66,47,.4)}
   .card .imgwrap{aspect-ratio:1/1.08;overflow:hidden;background:#fff;padding:14px}
   .card .imgwrap img{width:100%;height:100%;object-fit:contain;transition:.6s}
   .card:hover .imgwrap img{transform:scale(1.05)}
-  .card .cbody{padding:18px 18px 24px;text-align:center;display:flex;flex-direction:column;gap:7px}
+  .card .cbody{padding:16px 16px 22px;text-align:center;display:flex;flex-direction:column;gap:6px}
   .card .kind{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-  .card .name{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--forest)}
+  .card .name{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--forest)}
   .card .price{font-size:14px}
 
-  /* footer */
-  footer{background:var(--paper);border-top:1px solid var(--line);padding:70px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
-  .foot .mark{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:.12em;color:var(--forest)}
-  .foot p{font-size:13px;color:var(--muted);margin-top:14px;max-width:32ch}
+  footer{background:var(--paper);border-top:1px solid var(--line);padding:70px 0 0}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
   .foot h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);margin-bottom:18px}
+  .foot p{font-size:13px;color:var(--muted);margin-top:14px;max-width:32ch}
   .foot ul{list-style:none;display:flex;flex-direction:column;gap:11px}
   .foot ul a{font-size:13.5px;color:var(--muted)}
   .foot ul a:hover{color:var(--gold)}
-  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted)}
+  .newsform{display:flex;margin-top:16px;max-width:340px}
+  .newsform input{flex:1;padding:11px 14px;border:1px solid var(--line);background:#fff;font-family:'Jost';font-size:13px}
+  .newsform button{background:var(--forest);color:var(--cream);border:none;padding:0 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+  .social-row{display:flex;gap:10px;margin-top:14px}
+  .social-row a{width:32px;height:32px;border-radius:50%;background:var(--gold-soft);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+  .pay-row{display:flex;gap:8px;padding:22px 32px;border-top:1px solid var(--line);flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+  .pay-row span{font-size:10px;border:1px solid var(--line);padding:4px 8px;color:var(--muted);letter-spacing:.06em}
+  .foot-bottom{border-top:1px solid var(--line);padding:18px 32px;font-size:12px;color:var(--muted);text-align:center}
 
   @media(max-width:980px){
     .nav-links,.nav-right{display:none}
-    .pdp{grid-template-columns:1fr;gap:36px}
+    .utility .contact{display:none}
+    .pdp{grid-template-columns:1fr;gap:32px}
     .gallery{position:static}
-    .ing-grid,.rev-grid{grid-template-columns:1fr}
-    .steps{grid-template-columns:repeat(2,1fr);gap:36px 20px}
-    .claim{grid-template-columns:1fr}
-    .claim .media{aspect-ratio:4/3}
     .grid4{grid-template-columns:repeat(2,1fr)}
     .foot-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:560px){
     .wrap{padding:0 20px}
-    .pdp{padding:20px 20px 70px}
+    .pdp{padding:20px 20px 60px}
     .grid4{grid-template-columns:1fr 1fr;gap:18px}
-    .assure{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr}
+    .manuf-grid{grid-template-columns:1fr}
+    .rev-summary{gap:24px}
+    .stickybar .nm{font-size:14px}
   }
 </style>
 </head>
 <body>
 
-<div class="announce">Complimentary shipping on all orders above ₹999 · 100% Natural &amp; Chemical-Free</div>
+<div class="utility">
+  <div class="wrap">
+    <div class="contact"><a href="tel:+917845198490">+91 78451 98490</a><a href="mailto:admin@pixiecare.co.in">admin@pixiecare.co.in</a></div>
+    <div class="marquee"><span>Sustainability is the New Luxury</span></div>
+  </div>
+</div>
 
 <header>
   <div class="nav">
     <nav class="nav-links">
-      <a href="index.html">Shop All</a>
-      <a href="collection-women.html">Women</a>
+      <a href="index.html">Home</a>
+      <a href="collection-women.html">Women Range</a>
       <a href="index.html#ranges">Kids &amp; Babies</a>
-      <a href="index.html#ranges">Vegan</a>
+      <a href="index.html#ranges">Vegan Range</a>
     </nav>
     <a class="logo" href="index.html">
       <img src="assets/logo.png" alt="PixieCare — Authentic Sustainable Ayurveda">
     </a>
     <div class="nav-right">
       <a href="#">Search</a>
-      <a href="#">Account</a>
+      <a href="about.html">About Us</a>
       <a href="#">Cart (0)</a>
     </div>
   </div>
+  <div class="track-row"><a href="#">Track Your Order</a></div>
 </header>
 
 <div class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="collection-women.html">Women Range</a> &nbsp;/&nbsp; <span>Swarnamaya</span></div>
 
-<!-- PDP -->
-<div class="pdp">
-  <!-- gallery -->
+<div class="pdp" id="pdp-top">
   <div class="gallery">
-    <div class="g-main"><img id="mainImg" src="assets/swarnamaya.jpg" alt="Swarnamaya Kumkumadi 24K Gold Serum"></div>
-    <div class="g-thumbs">
-      <button class="active" data-src="assets/swarnamaya.jpg"><img src="assets/swarnamaya.jpg" alt="Product"></button>
-      <button data-src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop" alt="Texture"></button>
-      <button data-src="https://images.unsplash.com/photo-1602928321679-560bb453f190?q=80&w=800&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1602928321679-560bb453f190?q=80&w=800&auto=format&fit=crop" alt="Saffron"></button>
-      <button data-src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=800&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=800&auto=format&fit=crop" alt="Ritual"></button>
+    <div class="g-main">
+      <span class="wish" aria-label="Add to wishlist">♡</span>
+      <img src="assets/swarnamaya.jpg" alt="Swarnamaya Kumkumadi 24K Gold Serum">
     </div>
   </div>
 
-  <!-- info -->
   <div class="info">
     <div class="kicker"><span class="k">Face Serum · Women Range</span></div>
     <h1>Swarnamaya</h1>
-    <div class="subtitle">Kumkumadi 24K Gold Radiance Elixir</div>
-    <div class="stars"><span class="s">★★★★★</span> Loved by our community</div>
+    <div class="subtitle">kumkumadi 24k gold serum</div>
+    <div class="size">12ml e 0.41fl. oz.</div>
+    <div class="stars"><span class="s">★★★★★</span> 1 review</div>
 
-    <div class="price-row"><span class="now">₹2,299</span><span class="was">₹2,650</span><span class="off">13% off</span><span class="tax">MRP incl. of all taxes</span></div>
+    <div class="price-row"><span class="now">₹2,299.00</span><span class="was">₹2,650.00</span></div>
 
-    <p class="lead">A luxurious Ayurvedic face serum infused with traditional Kumkumadi oils and pure 24K gold leaf to illuminate, nourish and rejuvenate the skin — for a naturally youthful, luminous glow.</p>
-
-    <div class="benefits">
-      <span>Age-defying</span><span>Radiance boost</span><span>Softens fine lines</span><span>Deeply nourishing</span>
-    </div>
-
-    <div class="opt-label">Size</div>
-    <div class="sizes">
-      <button class="active">12 ml · 0.41 fl oz</button>
-    </div>
+    <p class="lead">A luxurious Ayurvedic face serum infused with traditional Kumkumadi oils and pure 24K gold leaf to illuminate, nourish, and rejuvenate the skin. This age-defying blend helps improve skin radiance, enhance softness, and reduce the appearance of fine lines and dullness for a naturally youthful glow. Lightweight and deeply nourishing, it leaves the skin smooth, luminous, and revitalised.</p>
 
     <div class="buy">
       <div class="qty">
@@ -248,136 +242,72 @@
         <input id="qty" value="1" readonly aria-label="Quantity">
         <button onclick="stepQty(1)" aria-label="Increase">+</button>
       </div>
-      <button class="btn btn-dark">Add to Cart · ₹2,299</button>
+      <button class="btn btn-dark">Add to cart</button>
     </div>
-    <a href="#" class="btn btn-block buynow">Buy it now</a>
 
-    <div class="assure">
-      <div><span class="ic">✦</span> 100% Natural &amp; chemical-free</div>
-      <div><span class="ic">❋</span> GMP &amp; ISO certified</div>
-      <div><span class="ic">☙</span> Cruelty-free, never tested on animals</div>
-      <div><span class="ic">✿</span> Free shipping over ₹999</div>
-    </div>
+    <div class="shipline"><span class="gi">🎁</span> Free Shipping on Orders worth ₹999 and above</div>
 
     <div class="acc">
       <details open>
-        <summary>Description <span class="plus">+</span></summary>
-        <div class="ac-body">
-          A luxurious age-defying blend that helps improve skin radiance, enhance softness, and reduce the appearance of fine lines and dullness. Lightweight yet deeply nourishing, it absorbs quickly and leaves the skin smooth, luminous and revitalised — a timeless Ayurvedic ritual reimagined for everyday radiance.
-        </div>
-      </details>
-      <details>
         <summary>Key Ingredients <span class="plus">+</span></summary>
-        <div class="ac-body">
-          <ul>
-            <li><b>Saffron</b> — evens tone for a natural glow</li>
-            <li><b>24 Carat Gold</b> — illuminates and revitalises tired skin</li>
-            <li><b>Sandalwood</b> — soothes and brightens</li>
-            <li><b>Manjistha</b> — the classical Ayurvedic radiance herb</li>
-            <li><b>Licorice &amp; Vetiver</b> — calm and balance</li>
-            <li><b>Rose extract</b> — hydrates and refreshes</li>
-          </ul>
-        </div>
+        <div class="ac-body">Saffron, 24 carat gold, Sandalwood, Manjistha, Licorice, Vetiver, rose extract etc.</div>
       </details>
       <details>
         <summary>How to Use <span class="plus">+</span></summary>
-        <div class="ac-body">
-          Apply 2–3 drops to cleansed face and neck. Gently massage in upward circular motions until fully absorbed. Use daily, preferably at night, for best results.
-        </div>
-      </details>
-      <details>
-        <summary>Shipping &amp; Returns <span class="plus">+</span></summary>
-        <div class="ac-body">
-          Complimentary shipping on orders above ₹999. Dispatched within 24–48 hours. Easy returns on unopened products within 7 days.
-        </div>
+        <div class="ac-body">Apply 2–3 drops to cleansed face and neck. Gently massage in upward circular motions until fully absorbed. Use daily, preferably at night, for best results.</div>
       </details>
     </div>
   </div>
 </div>
 
-<!-- KEY INGREDIENTS -->
-<section class="band ingredients">
+<!-- MANUFACTURED WITH CARE -->
+<section class="band manuf">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">What's inside</div>
-      <h2>The Elixir, Distilled</h2>
-      <p>Three heritage ingredients, traditionally revered in Ayurveda, blended into one luminous ritual.</p>
-    </div>
-    <div class="ing-grid">
-      <div class="ing">
-        <div class="ph"><img src="https://images.unsplash.com/photo-1602928321679-560bb453f190?q=80&w=800&auto=format&fit=crop" alt="Saffron"></div>
-        <h3>Kumkumadi &amp; Saffron</h3>
-        <p>The classical radiance blend that evens tone and revives dull skin.</p>
-      </div>
-      <div class="ing">
-        <div class="ph"><img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=800&auto=format&fit=crop" alt="24K gold"></div>
-        <h3>Pure 24K Gold Leaf</h3>
-        <p>Illuminates, revitalises and lends a naturally lit-from-within glow.</p>
-      </div>
-      <div class="ing">
-        <div class="ph"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop" alt="Botanical oils"></div>
-        <h3>Botanical Oils</h3>
-        <p>Cold-pressed and deeply nourishing, for softness that lasts.</p>
-      </div>
+    <div class="sec-head"><h2>Manufactured with care</h2></div>
+    <div class="manuf-grid">
+      <div class="manuf-item"><div class="ic">✦</div><h3>100% Natural</h3><p>Pixie Care products contain traditional Ayurvedic herbs, roots, fruits &amp; flowers.</p></div>
+      <div class="manuf-item"><div class="ic">❋</div><h3>Chemical Free</h3><p>Free from sulphate, paraben, NaOH (caustic soda), artificial colors, artificial fragrance, SLS, SLES, silicon, lead &amp; EDTA.</p></div>
     </div>
   </div>
 </section>
 
-<!-- RITUAL -->
-<section class="band ritual">
+<!-- CERTIFIED -->
+<section class="band certified">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">The nightly ritual</div>
-      <h2>A few drops to radiance</h2>
-    </div>
-    <div class="steps">
-      <div class="step"><div class="n">01</div><h4>Cleanse</h4><p>Begin with clean, dry skin at the end of your day.</p></div>
-      <div class="step"><div class="n">02</div><h4>Warm</h4><p>Press 2–3 drops between your fingertips.</p></div>
-      <div class="step"><div class="n">03</div><h4>Press</h4><p>Gently press into face and neck in upward strokes.</p></div>
-      <div class="step"><div class="n">04</div><h4>Rest</h4><p>Let it absorb overnight. Wake to a luminous glow.</p></div>
+    <div class="eyebrow">Certified Quality</div>
+    <h2 style="color:var(--forest);margin:12px 0 0">Trusted Care</h2>
+    <div class="cert-row">
+      <div class="seal"><span class="l1">Certified</span><span class="l2">ISO</span><span class="l3">22716:2007 Company</span></div>
+      <div class="seal"><span class="l1">ISO 22716</span><span class="l2">GMP</span><span class="l3">Good Manufacturing Practice</span></div>
     </div>
   </div>
 </section>
 
-<!-- CLAIM -->
-<section class="claim">
-  <div class="media" role="img" aria-label="Swarnamaya serum"></div>
-  <div class="txt">
-    <div class="eyebrow">Why Swarnamaya</div>
-    <h2>Ancient gold, made for modern skin.</h2>
-    <p>Kumkumadi has been Ayurveda's most treasured beauty ritual for centuries. We honour that lineage — pure, potent, and free from synthetics — so a timeless glow becomes part of your everyday.</p>
-    <div class="stat-row">
-      <div class="stat"><div class="n">100%</div><div class="l">Natural origin</div></div>
-      <div class="stat"><div class="n">24K</div><div class="l">Pure gold leaf</div></div>
-      <div class="stat"><div class="n">12ml</div><div class="l">A little goes far</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="band">
+<!-- CUSTOMER REVIEWS (real) -->
+<section class="band reviews">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Loved &amp; reviewed</div>
-      <h2>From our community</h2>
-    </div>
-    <div class="rev-grid">
-      <div class="rev">
+    <div class="sec-head"><h2>Customer Reviews</h2></div>
+    <div class="rev-summary">
+      <div class="rev-score">
         <div class="s">★★★★★</div>
-        <p>“My skin has never looked this luminous. Three weeks in and the glow is real.”</p>
-        <div class="who"><b>Priya R.</b> · Sample review</div>
+        <div class="n">5.00</div>
+        <div class="b">out of 5 · Based on 1 review</div>
       </div>
-      <div class="rev">
-        <div class="s">★★★★★</div>
-        <p>“A little goes a long way. It feels like a luxury ritual every single night.”</p>
-        <div class="who"><b>Ananya M.</b> · Sample review</div>
-      </div>
-      <div class="rev">
-        <div class="s">★★★★★</div>
-        <p>“Finally an Ayurvedic serum that's clean and actually works. Repurchasing.”</p>
-        <div class="who"><b>Divya S.</b> · Sample review</div>
+      <div class="rev-bars">
+        <div class="rev-bar"><span>5 ★</span><span class="track"><span class="fill" style="width:100%"></span></span><span>1</span></div>
+        <div class="rev-bar"><span>4 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+        <div class="rev-bar"><span>3 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+        <div class="rev-bar"><span>2 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
+        <div class="rev-bar"><span>1 ★</span><span class="track"><span class="fill" style="width:0%"></span></span><span>0</span></div>
       </div>
     </div>
+    <div class="rev-card">
+      <div class="s">★★★★★</div>
+      <div class="who"><b>Nura</b><span class="verified">Verified</span><span class="date">06/12/2026</span></div>
+      <div class="title">My new favourite nighttime routine</div>
+      <p>Honestly, I bought it because the bottle looked beautiful! But after using it for a few days, I'm really enjoying it — this has become my favourite part of my nighttime routine, the kumkumadi aroma feels so soothing and I wake up with skin that looks fresh, hydrated and naturally radiant.</p>
+    </div>
+    <div class="rev-cta"><a href="#" class="btn">Write a review</a></div>
   </div>
 </section>
 
@@ -389,21 +319,21 @@
       <h2>You may also love</h2>
     </div>
     <div class="grid4">
-      <a class="card" href="#">
+      <a class="card" href="product-swarnamaya.html">
         <div class="imgwrap"><img src="assets/varnini.jpg" alt="Varnini"></div>
-        <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Varnini</span><span class="price">₹495</span></div>
+        <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Varnini</span><span class="price">₹495.00</span></div>
       </a>
-      <a class="card" href="#">
+      <a class="card" href="product-swarnamaya.html">
         <div class="imgwrap"><img src="assets/haritha.jpg" alt="Haritha"></div>
-        <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Haritha</span><span class="price">₹385</span></div>
+        <div class="cbody"><span class="kind">Bath Bar</span><span class="name">Haritha</span><span class="price">₹385.00</span></div>
       </a>
-      <a class="card" href="#">
+      <a class="card" href="product-swarnamaya.html">
         <div class="imgwrap"><img src="assets/kesha-vardhana.png" alt="Kesha Vardhana"></div>
-        <div class="cbody"><span class="kind">Hair Oil</span><span class="name">Kesha Vardhana</span><span class="price">₹1,125</span></div>
+        <div class="cbody"><span class="kind">Hair Oil</span><span class="name">Kesha Vardhana</span><span class="price">₹1,125.00</span></div>
       </a>
-      <a class="card" href="#">
+      <a class="card" href="product-swarnamaya.html">
         <div class="imgwrap"><img src="assets/mridu.png" alt="Mridu"></div>
-        <div class="cbody"><span class="kind">Lip Balm</span><span class="name">Mridu</span><span class="price">₹499</span></div>
+        <div class="cbody"><span class="kind">Lip Balm</span><span class="name">Mridu</span><span class="price">₹499.00</span></div>
       </a>
     </div>
   </div>
@@ -411,69 +341,77 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap foot">
+  <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="mark">PIXIECARE</div>
-        <p>Ayurvedic skincare for the whole family — botanical, sustainable and made with love in India.</p>
+      <div class="foot">
+        <h4>Let's get in touch</h4>
+        <p>Enter your email address to receive news on new product launches, ad promotions, special offers and useful skincare routines.</p>
+        <form class="newsform" onsubmit="return false">
+          <input type="email" placeholder="Enter your email" aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
-      <div>
-        <h4>Shop</h4>
+      <div class="foot">
+        <h4>Quick Link</h4>
         <ul>
-          <li><a href="index.html">Shop All</a></li>
-          <li><a href="index.html">Women Range</a></li>
-          <li><a href="index.html">Kids &amp; Babies</a></li>
-          <li><a href="index.html">Vegan Range</a></li>
-          <li><a href="index.html">Under ₹999</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
+          <li><a href="index.html">Shop</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="#">The Journal</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Order Tracking</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Get in touch</h4>
+      <div class="foot">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Stay in Touch</h4>
         <ul>
           <li><a href="tel:+917845198490">+91 78451 98490</a></li>
           <li><a href="mailto:admin@pixiecare.co.in">admin@pixiecare.co.in</a></li>
-          <li><a href="#">@pixiecare_official</a></li>
         </ul>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 PixieCare. All rights reserved.</span>
-      <span>Privacy · Terms · Shipping &amp; Returns</span>
-    </div>
   </div>
+  <div class="pay-row">
+    <span>AMEX</span><span>Maestro</span><span>Mastercard</span><span>RuPay</span><span>VISA</span>
+  </div>
+  <div class="foot-bottom">© 2026 PIXIE CARE, All rights reserved.</div>
 </footer>
 
+<!-- STICKY MINI CART -->
+<div class="stickybar" id="stickybar">
+  <div class="in">
+    <img src="assets/swarnamaya.jpg" alt="Swarnamaya">
+    <div>
+      <div class="nm">Swarnamaya</div>
+      <div class="pr">₹2,299.00</div>
+    </div>
+    <div class="sp"></div>
+    <button class="btn btn-dark">Add to cart</button>
+  </div>
+</div>
+
 <script>
-  // gallery thumbnail switch
-  document.querySelectorAll('.g-thumbs button').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.getElementById('mainImg').src = b.getAttribute('data-src');
-      document.querySelectorAll('.g-thumbs button').forEach(function(x){x.classList.remove('active')});
-      b.classList.add('active');
-    });
-  });
-  // size toggle
-  document.querySelectorAll('.sizes button').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.querySelectorAll('.sizes button').forEach(function(x){x.classList.remove('active')});
-      b.classList.add('active');
-    });
-  });
-  // qty
   function stepQty(d){
     var el=document.getElementById('qty');
     var v=Math.max(1,(parseInt(el.value)||1)+d);
     el.value=v;
   }
+  var top=document.getElementById('pdp-top');
+  var bar=document.getElementById('stickybar');
+  window.addEventListener('scroll',function(){
+    var rect=top.getBoundingClientRect();
+    if(rect.bottom < 0){ bar.classList.add('show'); } else { bar.classList.remove('show'); }
+  });
 </script>
 </body>
 </html>
