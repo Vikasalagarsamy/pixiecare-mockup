@@ -50,6 +50,22 @@
   .cat-inner a:hover,.cat-inner a.on{opacity:1;color:var(--forest)}
   .cat-inner a.on::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:2px;background:var(--gold)}
 
+  /* ---- mobile nav ---- */
+  .hamburger{display:none;background:none;border:none;padding:0;cursor:pointer;align-items:center;color:var(--forest)}
+  .hamburger svg{width:23px;height:23px}
+  .mobile-nav-overlay{display:none;position:fixed;inset:0;background:rgba(42,42,36,.5);z-index:98}
+  .mobile-nav-overlay.open{display:block}
+  .mobile-nav{position:fixed;top:0;left:-300px;width:82vw;max-width:300px;height:100%;background:var(--paper);z-index:99;transition:left .3s ease;overflow-y:auto}
+  .mobile-nav.open{left:0}
+  .mobile-nav-head{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+  .mobile-nav-head img{height:36px}
+  .mobile-nav-close{background:none;border:none;cursor:pointer;color:var(--forest);padding:4px}
+  .mobile-nav-close svg{width:19px;height:19px}
+  .mobile-nav a{display:block;padding:15px 22px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line)}
+  .mobile-nav a.on{color:var(--forest)}
+  .mobile-nav .divider{padding:16px 22px 6px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .mobile-nav .sub a{font-weight:400;text-transform:none;font-size:13px;letter-spacing:0}
+
   .chero{text-align:center;padding:56px 24px 40px}
   .chero h1{font-size:clamp(30px,3.6vw,44px);color:var(--forest);margin-bottom:14px}
   .chero p{max-width:56ch;margin:0 auto;color:var(--muted);font-size:15px}
@@ -106,7 +122,10 @@
   .foot-bottom{border-top:1px solid var(--line);padding:18px 32px;font-size:12px;color:var(--muted);text-align:center}
 
   @media(max-width:980px){
-    .util-links,.cat-row{display:none}
+    .cat-row{display:none}
+    .util-links{display:none}
+    .util-inner{grid-template-columns:auto 1fr auto}
+    .hamburger{display:flex}
     .utility .contact{display:none}
     .cat-row{overflow-x:auto}
     .grid{grid-template-columns:repeat(2,1fr)}
@@ -132,6 +151,9 @@
 <header>
   <div class="util-row">
     <div class="util-inner">
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMobileNav(true)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
       <div class="util-links">
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
@@ -157,6 +179,34 @@
     </nav>
   </div>
 </header>
+<div class="mobile-nav-overlay" onclick="toggleMobileNav(false)"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-head">
+    <img src="assets/logo.png" alt="PixieCare">
+    <button class="mobile-nav-close" aria-label="Close menu" onclick="toggleMobileNav(false)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="collection-women.html">Women Range</a>
+  <a href="collection-kids.html" class="on">Kids &amp; Babies</a>
+  <a href="collection-under-999.html">Under &#8377;999/-</a>
+  <a href="collection-vegan.html">Vegan Range</a>
+  <div class="divider">Support</div>
+  <div class="sub">
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="#">Track Your Order</a>
+  </div>
+</nav>
+<script>
+function toggleMobileNav(open){
+  document.querySelector('.mobile-nav').classList.toggle('open', open);
+  document.querySelector('.mobile-nav-overlay').classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+</script>
+
 
 <section class="chero">
   <h1>Kids &amp; Babies Range</h1>
