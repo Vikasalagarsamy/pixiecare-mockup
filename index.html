@@ -53,18 +53,31 @@
   .cat-inner a:hover,.cat-inner a.on{opacity:1;color:var(--forest)}
   .cat-inner a.on::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:2px;background:var(--gold)}
 
-  /* ---- hero ---- */
-  .hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;color:#fff;background:
-    radial-gradient(120% 90% at 82% 30%, rgba(169,136,78,.55) 0%, rgba(169,136,78,0) 55%),
-    linear-gradient(115deg, #2b3527 0%, #33422F 42%, #3d4a35 100%)}
-  .hero::before{content:"";position:absolute;right:-8%;top:50%;transform:translateY(-50%);width:min(46vw,620px);height:min(46vw,620px);border-radius:50%;background:radial-gradient(circle,rgba(198,169,110,.45),rgba(198,169,110,0) 68%);filter:blur(6px)}
-  .hero::after{content:"स्वर्णमय";position:absolute;right:4%;bottom:-4%;font-family:'Cormorant Garamond',serif;font-size:22vw;line-height:.8;color:rgba(246,241,231,.05);pointer-events:none;white-space:nowrap}
-  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:70px 48px 20px;width:100%;position:relative;z-index:2}
-  .hero .eyebrow{color:var(--gold-soft)}
-  .hero h1{font-size:clamp(38px,5.6vw,72px);line-height:1.04;font-weight:500;margin:18px 0 22px;max-width:14ch}
-  .hero p{font-size:17px;font-weight:300;max-width:38ch;margin-bottom:34px;opacity:.94}
-  .hero .btn{border-color:#fff;color:#fff}
-  .hero .btn:hover{background:#fff;color:var(--forest)}
+  /* ---- hero (split-screen carousel) ---- */
+  .hero{position:relative;overflow:hidden;background:var(--cream)}
+  .hero-slide{display:none;grid-template-columns:1fr 1fr;height:620px}
+  .hero-slide.active{display:grid}
+  .hero-slide .ph{position:relative;overflow:hidden;background:var(--forest);height:100%}
+  .hero-slide .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,0) 30%)}
+  .hero-slide .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-slide .panel{background:linear-gradient(135deg,#2b3527 0%,#33422F 55%,#3d4a35 100%);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 7%;position:relative}
+  .hero-slide .panel::after{content:attr(data-wm);position:absolute;right:6%;bottom:-6%;font-family:'Cormorant Garamond',serif;font-size:13vw;line-height:.8;color:rgba(246,241,231,.05);pointer-events:none;white-space:nowrap}
+  .hero-slide .eyebrow{color:var(--gold-soft);position:relative;z-index:2}
+  .hero-slide h1{font-size:clamp(32px,3.6vw,52px);line-height:1.06;font-weight:500;margin:16px 0 20px;max-width:13ch;position:relative;z-index:2}
+  .hero-slide p{font-size:16px;font-weight:300;max-width:36ch;margin-bottom:28px;opacity:.94;position:relative;z-index:2}
+  .hero-slide .btn{border-color:#fff;color:#fff;align-self:flex-start;position:relative;z-index:2}
+  .hero-slide .btn:hover{background:#fff;color:var(--forest)}
+  .hero-slide.rev{grid-template-columns:1fr 1fr}
+  .hero-slide.rev .ph{order:2}
+  .hero-slide.rev .panel{order:1}
+  .hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:46px;height:46px;border-radius:50%;background:rgba(251,248,241,.92);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+  .hero-arrow:hover{background:#fff;border-color:var(--gold)}
+  .hero-arrow.prev{left:22px}
+  .hero-arrow.next{right:22px}
+  .hero-arrow svg{width:18px;height:18px}
+  .hero-dots{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;gap:10px;z-index:6}
+  .hero-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);cursor:pointer;padding:0;transition:.25s}
+  .hero-dots button.active{background:var(--gold-soft);width:24px;border-radius:4px;border-color:var(--gold-soft)}
 
   /* ---- section shell ---- */
   section{padding:88px 0}
@@ -165,15 +178,21 @@
     .mission{grid-template-columns:1fr;gap:32px}
     .why-grid{grid-template-columns:repeat(3,1fr)}
     .foot-grid{grid-template-columns:1fr 1fr}
+    .hero-slide,.hero-slide.rev{grid-template-columns:1fr;height:auto}
+    .hero-slide .ph{order:1;height:280px}
+    .hero-slide.rev .ph{order:1}
+    .hero-slide .panel,.hero-slide.rev .panel{order:2;padding:44px 7% 64px}
   }
   @media(max-width:560px){
     .wrap{padding:0 20px}
     section{padding:60px 0}
     .grid{grid-template-columns:1fr 1fr;gap:20px 14px}
-    .hero-inner{padding:0 24px}
     .foot-grid{grid-template-columns:1fr}
     .why-grid{grid-template-columns:repeat(2,1fr);gap:26px 16px}
     .cert-row{gap:28px}
+    .hero-arrow{width:38px;height:38px}
+    .hero-arrow.prev{left:12px}
+    .hero-arrow.next{right:12px}
   }
 </style>
 </head>
@@ -217,13 +236,59 @@
 
 <!-- HERO -->
 <section class="hero" style="padding:0">
-  <div class="hero-inner">
-    <div class="eyebrow">Rooted in Ayurveda · Made for Families</div>
-    <h1>Timeless skincare, gently reimagined.</h1>
-    <p>Botanical formulations crafted from time-honoured Ayurvedic wisdom — pure, potent and kind to every generation of your family.</p>
-    <a href="#shop" class="btn">Discover the Collection</a>
+  <div class="hero-slide active" data-i="0">
+    <div class="ph"><img src="assets/swarnamaya.jpg" alt="Swarnamaya Kumkumadi 24K Gold Serum"></div>
+    <div class="panel" data-wm="स्वर्णमय">
+      <div class="eyebrow">Rooted in Ayurveda · Made for Families</div>
+      <h1>Timeless skincare, gently reimagined.</h1>
+      <p>Botanical formulations crafted from time-honoured Ayurvedic wisdom — pure, potent and kind to every generation of your family.</p>
+      <a href="#shop" class="btn">Discover the Collection</a>
+    </div>
+  </div>
+  <div class="hero-slide rev" data-i="1">
+    <div class="ph"><img src="assets/hira.png" alt="Hira Miracle Baby Nourishing Cream"></div>
+    <div class="panel" data-wm="हिरा">
+      <div class="eyebrow">Kids &amp; Babies</div>
+      <h1>Miracle care for your little ones.</h1>
+      <p>Nourishing, tear-free formulas crafted for delicate baby skin — gentle enough for daily rituals, from bump to babyhood.</p>
+      <a href="collection-kids.html" class="btn">Shop Kids &amp; Babies</a>
+    </div>
+  </div>
+  <div class="hero-slide" data-i="2">
+    <div class="ph"><img src="assets/carukesi.jpg" alt="Carukesi Baby Shampoo Bar"></div>
+    <div class="panel" data-wm="वीगन">
+      <div class="eyebrow">Vegan Range</div>
+      <h1>Plant-powered, cruelty-free.</h1>
+      <p>Vegan formulations rooted in Ayurveda — kind to your family and kind to the planet, with zero compromise on care.</p>
+      <a href="collection-vegan.html" class="btn">Shop Vegan Range</a>
+    </div>
+  </div>
+  <button class="hero-arrow prev" aria-label="Previous slide" onclick="heroGo(-1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#33422F" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="hero-arrow next" aria-label="Next slide" onclick="heroGo(1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#33422F" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="hero-dots">
+    <button class="active" aria-label="Slide 1" onclick="heroSet(0)"></button>
+    <button aria-label="Slide 2" onclick="heroSet(1)"></button>
+    <button aria-label="Slide 3" onclick="heroSet(2)"></button>
   </div>
 </section>
+<script>
+(function(){
+  var slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dots button'),cur=0,timer;
+  function show(i){
+    cur=(i+slides.length)%slides.length;
+    slides.forEach(function(s,idx){s.classList.toggle('active',idx===cur)});
+    dots.forEach(function(d,idx){d.classList.toggle('active',idx===cur)});
+  }
+  window.heroGo=function(dir){show(cur+dir);restart()};
+  window.heroSet=function(i){show(i);restart()};
+  function restart(){clearInterval(timer);timer=setInterval(function(){show(cur+1)},6500)}
+  restart();
+})();
+</script>
 
 <!-- MISSION (real copy) -->
 <section>
