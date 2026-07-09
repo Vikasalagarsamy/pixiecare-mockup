@@ -53,29 +53,18 @@
   .cat-inner a:hover,.cat-inner a.on{opacity:1;color:var(--forest)}
   .cat-inner a.on::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:2px;background:var(--gold)}
 
-  /* ---- hero (split-screen carousel) ---- */
-  .hero{position:relative;overflow:hidden;background:var(--cream)}
-  .hero-slide{display:none;grid-template-columns:1fr 1fr;height:620px}
-  .hero-slide.active{display:grid}
-  .hero-slide .ph{position:relative;overflow:hidden;background:var(--forest);height:100%}
-  .hero-slide .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,0) 30%)}
-  .hero-slide .ph img{width:100%;height:100%;object-fit:cover;display:block}
-  .hero-slide .panel{background:linear-gradient(135deg,#2b3527 0%,#33422F 55%,#3d4a35 100%);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 7%;position:relative}
-  .hero-slide .panel::after{content:attr(data-wm);position:absolute;right:6%;bottom:-6%;font-family:'Cormorant Garamond',serif;font-size:13vw;line-height:.8;color:rgba(246,241,231,.05);pointer-events:none;white-space:nowrap}
-  .hero-slide .eyebrow{color:var(--gold-soft);position:relative;z-index:2}
-  .hero-slide h1{font-size:clamp(32px,3.6vw,52px);line-height:1.06;font-weight:500;margin:16px 0 20px;max-width:13ch;position:relative;z-index:2}
-  .hero-slide p{font-size:16px;font-weight:300;max-width:36ch;margin-bottom:28px;opacity:.94;position:relative;z-index:2}
-  .hero-slide .btn{border-color:#fff;color:#fff;align-self:flex-start;position:relative;z-index:2}
-  .hero-slide .btn:hover{background:#fff;color:var(--forest)}
-  .hero-slide.rev{grid-template-columns:1fr 1fr}
-  .hero-slide.rev .ph{order:2}
-  .hero-slide.rev .panel{order:1}
+  /* ---- hero (real banner-image carousel) ---- */
+  .hero{position:relative;overflow:hidden;background:#111}
+  .hero-slide{display:none}
+  .hero-slide.active{display:block}
+  .hero-slide a{display:block;line-height:0}
+  .hero-slide img{width:100%;height:auto;display:block}
   .hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:46px;height:46px;border-radius:50%;background:rgba(251,248,241,.92);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
   .hero-arrow:hover{background:#fff;border-color:var(--gold)}
   .hero-arrow.prev{left:22px}
   .hero-arrow.next{right:22px}
   .hero-arrow svg{width:18px;height:18px}
-  .hero-dots{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;gap:10px;z-index:6}
+  .hero-dots{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;gap:10px;z-index:6}
   .hero-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);cursor:pointer;padding:0;transition:.25s}
   .hero-dots button.active{background:var(--gold-soft);width:24px;border-radius:4px;border-color:var(--gold-soft)}
 
@@ -178,10 +167,6 @@
     .mission{grid-template-columns:1fr;gap:32px}
     .why-grid{grid-template-columns:repeat(3,1fr)}
     .foot-grid{grid-template-columns:1fr 1fr}
-    .hero-slide,.hero-slide.rev{grid-template-columns:1fr;height:auto}
-    .hero-slide .ph{order:1;height:280px}
-    .hero-slide.rev .ph{order:1}
-    .hero-slide .panel,.hero-slide.rev .panel{order:2;padding:44px 7% 64px}
   }
   @media(max-width:560px){
     .wrap{padding:0 20px}
@@ -237,31 +222,60 @@
 <!-- HERO -->
 <section class="hero" style="padding:0">
   <div class="hero-slide active" data-i="0">
-    <div class="ph"><img src="assets/swarnamaya.jpg" alt="Swarnamaya Kumkumadi 24K Gold Serum"></div>
-    <div class="panel" data-wm="स्वर्णमय">
-      <div class="eyebrow">Rooted in Ayurveda · Made for Families</div>
-      <h1>Timeless skincare, gently reimagined.</h1>
-      <p>Botanical formulations crafted from time-honoured Ayurvedic wisdom — pure, potent and kind to every generation of your family.</p>
-      <a href="#shop" class="btn">Discover the Collection</a>
-    </div>
+    <a href="product-dhanvantari.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-1.jpg">
+        <img src="assets/hero/SL-D-1.jpg" alt="Dhanvantari — Pure, Traditional Care for Little Eyes">
+      </picture>
+    </a>
   </div>
-  <div class="hero-slide rev" data-i="1">
-    <div class="ph"><img src="assets/hira.png" alt="Hira Miracle Baby Nourishing Cream"></div>
-    <div class="panel" data-wm="हिरा">
-      <div class="eyebrow">Kids &amp; Babies</div>
-      <h1>Miracle care for your little ones.</h1>
-      <p>Nourishing, tear-free formulas crafted for delicate baby skin — gentle enough for daily rituals, from bump to babyhood.</p>
-      <a href="collection-kids.html" class="btn">Shop Kids &amp; Babies</a>
-    </div>
+  <div class="hero-slide" data-i="1">
+    <a href="product-carukesi.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-2.jpg">
+        <img src="assets/hero/SL-D-2.jpg" alt="Carukesi — Gentle Ayurvedic Shikakai Shampoo Bar">
+      </picture>
+    </a>
   </div>
   <div class="hero-slide" data-i="2">
-    <div class="ph"><img src="assets/carukesi.jpg" alt="Carukesi Baby Shampoo Bar"></div>
-    <div class="panel" data-wm="वीगन">
-      <div class="eyebrow">Vegan Range</div>
-      <h1>Plant-powered, cruelty-free.</h1>
-      <p>Vegan formulations rooted in Ayurveda — kind to your family and kind to the planet, with zero compromise on care.</p>
-      <a href="collection-vegan.html" class="btn">Shop Vegan Range</a>
-    </div>
+    <a href="collection-kids.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-3.jpg">
+        <img src="assets/hero/SL-D-3.jpg" alt="Tej — Naturally Clean, Naturally Bright baby ubtan">
+      </picture>
+    </a>
+  </div>
+  <div class="hero-slide" data-i="3">
+    <a href="product-hira.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-4.jpg">
+        <img src="assets/hero/SL-D-4.jpg" alt="Hira — Deep Nourishment for Delicate Skin">
+      </picture>
+    </a>
+  </div>
+  <div class="hero-slide" data-i="4">
+    <a href="product-varnini.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-5.jpg">
+        <img src="assets/hero/SL-D-5.jpg" alt="Varnini — Nourish Naturally, Close to Skin">
+      </picture>
+    </a>
+  </div>
+  <div class="hero-slide" data-i="5">
+    <a href="product-varnini.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-6.jpg">
+        <img src="assets/hero/SL-D-6.jpg" alt="Varnini — Naturally Soft, Calm Care">
+      </picture>
+    </a>
+  </div>
+  <div class="hero-slide" data-i="6">
+    <a href="product-aja.html">
+      <picture>
+        <source media="(max-width:767px)" srcset="assets/hero/SL-M-7.jpg">
+        <img src="assets/hero/SL-D-7.jpg" alt="Aja — Healing Touch of Ayurveda">
+      </picture>
+    </a>
   </div>
   <button class="hero-arrow prev" aria-label="Previous slide" onclick="heroGo(-1)">
     <svg viewBox="0 0 24 24" fill="none" stroke="#33422F" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg>
@@ -273,6 +287,10 @@
     <button class="active" aria-label="Slide 1" onclick="heroSet(0)"></button>
     <button aria-label="Slide 2" onclick="heroSet(1)"></button>
     <button aria-label="Slide 3" onclick="heroSet(2)"></button>
+    <button aria-label="Slide 4" onclick="heroSet(3)"></button>
+    <button aria-label="Slide 5" onclick="heroSet(4)"></button>
+    <button aria-label="Slide 6" onclick="heroSet(5)"></button>
+    <button aria-label="Slide 7" onclick="heroSet(6)"></button>
   </div>
 </section>
 <script>
@@ -285,7 +303,7 @@
   }
   window.heroGo=function(dir){show(cur+dir);restart()};
   window.heroSet=function(i){show(i);restart()};
-  function restart(){clearInterval(timer);timer=setInterval(function(){show(cur+1)},6500)}
+  function restart(){clearInterval(timer);timer=setInterval(function(){show(cur+1)},6000)}
   restart();
 })();
 </script>
