@@ -48,7 +48,16 @@
   .cat-inner{max-width:var(--maxw);margin:0 auto;padding:15px 32px;display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap}
   .cat-inner a{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--ink);opacity:.82;transition:.2s;position:relative;padding-bottom:2px}
   .cat-inner a:hover,.cat-inner a.on{opacity:1;color:var(--forest)}
+  /* mega-menu-done */
   .cat-inner a.on::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:2px;background:var(--gold)}
+  .cat-item{position:relative;display:flex;align-items:center}
+  .cat-drop{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 48px -22px rgba(42,42,36,.28);min-width:230px;padding:12px 0;opacity:0;visibility:hidden;transition:opacity .18s ease,visibility .18s ease;z-index:40}
+  .cat-item:hover .cat-drop{opacity:1;visibility:visible}
+  .cat-drop.wide{min-width:420px;column-count:2;column-gap:0;padding:12px 0}
+  .cat-drop a{display:block;padding:9px 22px;font-size:12.5px;letter-spacing:.02em;text-transform:none;font-weight:400;color:var(--ink);opacity:.85;break-inside:avoid}
+  .cat-drop a:hover{opacity:1;color:var(--forest);background:var(--cream)}
+  .cat-drop a .pline{display:block;font-size:10.5px;color:var(--muted);margin-top:1px;text-transform:none;letter-spacing:0}
+  .cat-drop .seeall{border-top:1px solid var(--line);margin-top:6px;padding-top:12px;font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.08em;color:var(--forest);column-span:all}
 
   /* ---- mobile nav ---- */
   .hamburger{display:none;background:none;border:none;padding:0;cursor:pointer;align-items:center;color:var(--forest)}
@@ -173,10 +182,54 @@
   <div class="cat-row">
     <nav class="cat-inner">
       <a href="index.html">Home</a>
+      <div class="cat-item">
       <a href="collection-women.html">Women Range</a>
+      <div class="cat-drop">
+        <a href="product-swarnamaya.html">Swarnamaya<span class="pline">Kumkumadi 24K Gold Serum</span></a>
+        <a href="product-varnini.html">Varnini<span class="pline">Golden Glow Therapy</span></a>
+        <a href="product-haritha.html">Haritha<span class="pline">Clear Skin Therapy</span></a>
+        <a href="product-kesha-vardhana.html">Kesha Vardhana<span class="pline">Hair Growth Oil</span></a>
+        <a href="product-mridu.html">Mridu<span class="pline">Lip Balm</span></a>
+        <a href="product-kansa-gua-sha.html">Kansa Gua Sha<span class="pline">Adults · All Skin Types</span></a>
+        <a href="collection-women.html" class="seeall">See All</a>
+      </div>
+    </div>
+      <div class="cat-item">
       <a href="collection-kids.html">Kids &amp; Babies</a>
+      <div class="cat-drop wide">
+        <a href="product-aja.html">Aja<span class="pline">Healing Baby Massage Oil</span></a>
+        <a href="product-cananga.html">Cananga<span class="pline">Ayurvedic Nourishing Bar</span></a>
+        <a href="product-carukesi.html">Carukesi<span class="pline">Baby Shampoo Bar</span></a>
+        <a href="product-dhanvantari.html">Dhanvantari<span class="pline">Baby Eye Kajal</span></a>
+        <a href="product-hira.html">Hira<span class="pline">Miracle Baby Nourishing Cream</span></a>
+        <a href="product-kshira.html">Kshira<span class="pline">Baby Nourishing Bar</span></a>
+        <a href="product-tejini.html">Tejini<span class="pline">Nalangu Mavu Soap</span></a>
+        <a href="collection-kids.html" class="seeall">See All</a>
+      </div>
+    </div>
+      <div class="cat-item">
       <a href="collection-under-999.html">Under &#8377;999/-</a>
+      <div class="cat-drop wide">
+        <a href="product-varnini.html">Varnini<span class="pline">Golden Glow Therapy</span></a>
+        <a href="product-haritha.html">Haritha<span class="pline">Clear Skin Therapy</span></a>
+        <a href="product-mridu.html">Mridu<span class="pline">Lip Balm</span></a>
+        <a href="product-tejini.html">Tejini<span class="pline">Nalangu Mavu Soap</span></a>
+        <a href="product-aja.html">Aja<span class="pline">Healing Baby Massage Oil</span></a>
+        <a href="product-cananga.html">Cananga<span class="pline">Ayurvedic Nourishing Bar</span></a>
+        <a href="product-carukesi.html">Carukesi<span class="pline">Baby Shampoo Bar</span></a>
+        <a href="product-dhanvantari.html">Dhanvantari<span class="pline">Baby Eye Kajal</span></a>
+        <a href="product-kshira.html">Kshira<span class="pline">Baby Nourishing Bar</span></a>
+        <a href="collection-under-999.html" class="seeall">See All</a>
+      </div>
+    </div>
+      <div class="cat-item">
       <a href="collection-vegan.html" class="on">Vegan Range</a>
+      <div class="cat-drop">
+        <a href="product-cananga.html">Cananga<span class="pline">Ayurvedic Nourishing Bar</span></a>
+        <a href="product-carukesi.html">Carukesi<span class="pline">Baby Shampoo Bar</span></a>
+        <a href="collection-vegan.html" class="seeall">See All</a>
+      </div>
+    </div>
     </nav>
   </div>
 </header>
